@@ -1,0 +1,9 @@
+﻿.wrap{ width:auto;margin:auto 10px;}
+.bodyer{ padding:10px 1px;}
+.bodyer h2{ padding-left:20px;font:bold 14px "幼圆";text-align:left;}
+.bodyer h2 q{ color:#f00;}
+.bodyer h3{ border-width:1px;}
+.mainDiv{ margin:auto;padding:10px 0;}
+.resultList{ padding-right:20px;}
+.topText{ font:13px/1.5em "宋体";}
+#myPager{ padding:0;}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="gb2312" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="keywords" content="GDSN, 商品, 产品, 生产企业, 制造商, 零售商, GS1China, 中国物品编码中心" />
+	<meta name="description" content="UNSPSC 联合国标准产品服务与分类代码 分类产品列表 " />
+	<meta name="save" content="history" />
+
+	<meta http-equiv='Expires' content='0'>
+	<meta http-equiv='Cache-Control' content='no-cache'>
+	<meta http-equiv='Pragma' content='no-cache'>
+	<title>条码数据库，商品信息，生产企业，制造商，零售商，全球数据同步--搜索结果</title>
+	<link rel="stylesheet" href="https://www.gds.org.cn/css/common.css" />
+	<link rel="stylesheet" href="https://www.gds.org.cn/css/paginationWeb.css" />
+	<link rel="stylesheet" href="https://www.gds.org.cn/css/width100.css" />
+	<link rel="stylesheet" href="https://www.gds.org.cn/V3/style/zCool-1.0/icons.css" />
+	<link rel="stylesheet" href="https://www.gds.org.cn/V3/style/zCool-1.0/form.css" />
+	<link rel="stylesheet" href="https://www.gds.org.cn/style/searchResult.css" />
+	<style type="text/css">
+		#results li {}
+
+		.result {
+
+			margin: 0;
+			padding: 10px 0;
+			border-bottom: 1px solid #999;
+		}
+
+		.result .p-img {
+			float: left;
+			margin: 0;
+			padding: 1px;
+			border: 1px solid #999;
+			width: 90px;
+			height: 90px;
+		}
+
+		.result .p-img a {
+			display: block;
+			overflow: hidden;
+			width: 90px;
+			height: 90px;
+		}
+
+		.result .p-img a img {
+			display: block;
+			width: 90px;
+			height: 90px;
+		}
+
+		.result .p-supplier {
+			float: right;
+			width: 23em;
+		}
+
+		.result .p-info {
+			margin: 0 25em 0 110px;
+		}
+
+		.result dt {
+			float: left;
+			font-weight: bold;
+		}
+
+		.result dd {}
+
+		#gdsSearch {
+			margin: 19px 0 0;
+		}
+
+		#keyword,
+		#gdsBtn {
+			height: 40px;
+		}
+
+		#keyword {
+			background-image: none;
+			background-color: #fff;
+			font-size: 16px;
+		}
+
+		#gdsBtn {
+			background-size: 100% 100%;
+			margin-left: 10px !important;
+		}
+
+		.l-captcha iframe {
+			height: 40px;
+		}
+
+		.l-captcha iframe #l_captcha_widget .captcha-widget-copyright,
+		.l-captcha iframe #l_captcha_widget .captcha-widget-event {
+			top: -5px;
+		}
+	</style>
+
+	<link rel="stylesheet" href="dist/photoswipe/photoswipe.css">
+	<!--<link rel="stylesheet" href="dist/swiper/swiper.min.css">-->
+	<link rel="stylesheet" href="dist/photoswipe/default-skin/default-skin.css">
+	<link rel="stylesheet" href="css/goods.css" />
+	<!--<script src="dist/swiper/swiper.min.js"></script>-->
+	<script src="dist/jquery-1.11.2.js"></script>
+	<script src="dist/photoswipe/photoswipe.min.js"></script>
+	<script src="dist/photoswipe/photoswipe-ui-default.min.js"></script>
+
+	<script src="https://www.gds.org.cn/V3/js/zCool-1.0/zCool.js"></script>
+	<script src="https://www.gds.org.cn/V3/js/zCool-1.0/zCool.Form.js"></script>
+	<script src="https://www.gds.org.cn/V3/js/zCool-1.0/zCool.String.js"></script>
+	<script src="https://www.gds.org.cn/js/UICheck/LoginCheck.js"></script>
+	<!--人机验证-->
+	<script src="//captcha.luosimao.com/static/js/api.js"></script>
+
+
+
+	<script></script>
+	<script type="text/javascript">
+		// 定义：限制元素的宽高在一个规定尺寸的容器内
+     // @img DOM Element 通常为图片
+     // @minWidth UInt 限定元素的最大宽度
+     // @minWidth UInt 限定元素的最大高度
+     // @fill Boolean 在宽高都不足规定的尺寸时，true就等比放大至规定的尺寸，否则保持原样
+     function limitImgSize(img, maxWidth, maxHeight, fill) {
+
+         var style = img.style, ow, oh, wRatio, hRatio, width, height;
+
+         //var toLocate = $.finalStyle(img, 'position') === 'absolute';
+         var toLocate = true;
+
+         style.top = style.left = '-32767px';
+         style.width = style.height = 'auto';
+
+         if ((ow = img.offsetWidth) && (oh = img.offsetHeight) &&
+			((ow > maxWidth || oh > maxHeight) || (fill && ow < maxWidth && oh < maxHeight))) {
+
+             if ((wRatio = ow / maxWidth) >= (hRatio = oh / maxHeight)) {
+                 style.width = maxWidth + 'px';
+                 style.left = '';
+                 style.height = (height = oh / wRatio) + 'px';
+                 style.top = toLocate ? (maxHeight - height) / 2 + 'px' : '';
+             }
+             else {
+                 style.height = maxHeight + 'px';
+                 style.top = '';
+                 style.width = (width = ow / hRatio) + 'px';
+                 style.left = toLocate ? (maxWidth - width) / 2 + 'px' : '';
+             }
+         }
+         else {
+             if (toLocate) {
+                 style.top = (maxHeight - oh) / 2 + 'px';
+                 style.left = (maxWidth - ow) / 2 + 'px';
+             }
+             else {
+                 style.top = style.left = '';
+             }
+         }
+
+         return img;
+     };
+	</script>
+</head>
+
+<body>
+	<form name="form1" method="post" action="searchResult2.aspx?keyword=6902022134333" id="form1">
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTcwMzQzMjM1OQ9kFgICAQ9kFg4CAQ8PFgIeBFRleHQFDTY5MDIwMjIxMzQzMzNkZAIDDxYCHgdWaXNpYmxlaGQCBQ9kFgICAQ8PFgIfAAVqPGZvbnQgY29sb3I9J2JsYWNrJz7ns7vnu5/kuK3nrKblkIjmnaHku7Y8L2ZvbnQ+IDA2OTAyMDIyMTM0MzMzPGZvbnQgY29sb3I9J2JsYWNrJz4g55qE5ZWG5ZOB5pyJ77yaPC9mb250PmRkAgcPDxYCHwFoZGQCCQ8WAh8BaGQCDQ8PFgYeEEN1cnJlbnRQYWdlSW5kZXgCAR4OQ3VzdG9tSW5mb1RleHQFjgHmgLvorrDlvZXmlbDvvJo8Zm9udCBjb2xvcj0iYmx1ZSI+PGI+MTwvYj48L2ZvbnQ+IOaAu+mhteaVsO+8mjxmb250IGNvbG9yPSJibHVlIj48Yj4xPC9iPjwvZm9udD4g5b2T5YmN6aG177yaPGZvbnQgY29sb3I9InJlZCI+PGI+MTwvYj48L2ZvbnQ+HgtSZWNvcmRjb3VudAIBZGQCDw8WAh8BaGRkYJMh8jiO6j4UoamC5s6vO1V6sLE=" />
+
+		<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKY3qSwAwLd5eLQCWa9bQ66HiAIjaWMzRcUN8D+2Hbv" />
+		<div class="wrap">
+			<div class="header">
+				<h1>
+					<a href="http://www.gds.org.cn">
+						<img name="logoBar" src="/img/logoBar1.gif" alt="中国商品信息服务平台" /></a></h1>
+				<div id="gdsSearch" class="search">
+
+					<p> <label for="keyword" class="input-prompt-label"><input name="keyword" type="text" value="6902022134333" maxlength="2048" id="keyword" tabindex="1" name="keyword" type="text" size="55" class="inputText" /></label>
+
+
+						<label for="gdsBtn" class="for-gdsBtn">
+            <button type="button" name="gdsBtn" id="gdsBtn">搜&nbsp;&nbsp;索</button>
+          </label>
+
+					</p>
+				</div>
+			</div>
+			<div class="bodyer">
+				<div class="mainly">
+					<div class="main">
+						<h2>
+							<div style="padding-top :10px">
+								<div id="yanzhengP" Width="100%">
+									<span id="Label1" style="display:inline-block;text-align:center"><font color="Red"><font color='black'>系统中符合条件</font> 06902022134333<font color='black'> 的商品有：</font></font></span>
+									<br />
+									<span id="Label3" style="display:inline-block;text-align:center"><font color="Red"></font></span>
+								</div>
+
+
+							</div>
+						</h2>
+
+					</div>
+					<div id="outter">
+						<ol id="results">
+
+							<li>
+								<div class="result">
+									<p class="p-img" align="center"><a id="repList_ctl00_herl" target="_blank">
+											<img src="/img/empty_90-90.8.png" id="repList_ctl00_productimg" width="90" height="90" onload="limitImgSize(this, 90, 90,true);" /></a>
+									</p>
+									<dl class="p-supplier">
+										<dt>商标：</dt>
+										<dd>蓝月亮</dd>
+										<dt>发布厂家：</dt>
+										<dd>
+											<a id="repList_ctl00_firmLink" target="_blank">蓝月亮(中国)有限公司</a>
+										</dd>
+
+										<dt>条码状态：</dt>
+										<dd>
+											<span id="repList_ctl00_status">经查，该商品条码已在中国物品编码中心注册，编码信息已按规定通报。</span>
+										</dd>
+									</dl>
+									<dl class="p-info">
+										<dt>商品条码：</dt>
+
+										<dd> <a href="http://search.anccnet.com/goodsDetail.aspx?base_id=DD7D9F9DAA7E7EC3B14610260177FB7322C5FDDA1C8BCF296B5DDE375B790584"
+												target="_blank">06902022134333</a></dd>
+										<dd> </dd>
+										<dd> </dd>
+										<dt>名称：</dt>
+										<dd> 1kg深层洁净护理洗衣液（薰衣草香）</dd>
+										<dt>规格型号：</dt>
+										<dd> 1kg</dd>
+										<dt>描述：</dt>
+										<dd> </dd>
+									</dl>
+									<br clear="all" />
+                        </div>
+							</li>
+
+						</ol>
+					</div>
+				</div>
+				<div id="myPager">
+
+				</div>
+			</div>
+
+		</div>
+
+
+		<style type="text/css">
+			/** 页脚 */
+			.footer {
+				padding: 1px 1px 20px;
+				border-top: 1px solid #CADAE2;
+				zoom: 1;
+				text-align: center;
+				line-height: normal;
+				font-size: 13px
+			}
+
+			.footer p {
+				margin: 14px auto;
+			}
+
+			.intro {
+				padding-top: 20px;
+				height: 25px;
+				background: url(http://www.anccnet.com/img/web_header1.png) 0 -130px repeat-x;
+			}
+
+			.introList {
+				display: inline-block;
+				display: -moz-inline-box;
+				+display: inline;
+				+zoom: 1;
+				overflow: hidden;
+				padding-left: 0;
+			}
+
+			.intro li {
+				display: inline;
+				float: left;
+				margin-left: -1px;
+				padding: 0 1.8em;
+				border-left: 1px solid #000;
+			}
+
+			.copyright em {
+				font: 14px Georgia, "Times New Roman", Times, serif
+			}
+
+			.phone {
+				display: none;
+			}
+
+			.icp {}
+
+			.email {
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			function h(obj,url){obj.style.behavior='url(#default#homepage)';obj.setHomePage(url);}
+		</script>
+		<div class="footer">
+			<div class="intro">
+				<ul class="introList">
+					<li><a href="http://www.anccnet.com/aboutGds.aspx">关于平台</a></li>
+					<li><a href="http://www.anccnet.com/highService.aspx">高端服务</a></li>
+					<li><a href="http://www.anccnet.com/aboutANCC.aspx">中国物品编码中心</a></li>
+					<li><a href="http://www.anccnet.com/legal_notices.aspx">法律声明</a></li>
+					<li><a href="http://www.anccnet.com/service_iterm.aspx">服务条款</a></li>
+					<li><a href="#" onclick="h(this,'http://www.gds.org.cn/')">设为首页</a></li>
+				</ul>
+			</div>
+			<p class="copyright"><em>Copyright &copy; 2008 gds.org.cn All rights reserved</em> 中国物品编码中心 版权所有</p>
+			<p class="icp"><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备05012621号</a></p>
+		</div>
+		</div>
+		</div>
+		<script type="text/javascript" language="javascript">
+			function gdsBtn_onclick() {
+//var obj =document.getElementById("keyword");
+//if(!/\S/.test(obj.value)) //1009改过
+//{return;
+//}
+//window.location.href = "searchResult.aspx?keyword=" + escape(obj.value);
+////debugger
+}
+		</script>
+	</form>
+</body>
+<script type="text/javascript">
+	// 搜索区块表单元素
+//var gdsSearch = $("#gdsSearch")[0], gdsElems = $($.byTag(gdsSearch, "input"))
+// 设置搜索区块焦点标志
+//gdsElems.focus(function(){ gdsSearch.focusStamp = true;}).blur(function(){ gdsSearch.focusStamp = false;});
+// 提交事件判断
+//document.forms["form1"].onsubmit=function(){
+//	if(gdsSearch.focusStamp){
+//		gdsBtn_onclick();
+//		return false;
+//	}
+	
+//}
+</script>
+<script type="text/javascript">
+	///$('#keyword').inputPrompts('input-prompt-text');
+        $('#gdsBtn').click(submitCheck);
+
+        function submitCheck(e) {
+            e.preventDefault();
+            var keyword = $.byId('keyword');
+            var value = keyword.value.trim();
+            var search_subjoin;
+            var sValue;
+            if (value && value !== keyword.getAttribute('placeholder')) {
+                $('<a href="/searchResult2.aspx?keyword=' + value + '"></a>').appendTo('body').on('click').remove(true, true);
+
+                //				$.byId('CheckCodeBox').style.display = '';
+                //				search_subjoin = $.byId('search_subjoin');
+                //				sValue = search_subjoin.value.trim();
+                //				if(  sValue && (!search_subjoin.getAttribute('data-async-valid') || $(search_subjoin).hasClass($.Form.asyncValidClass)) ){
+                //					window.location.href = 
+                //						"/searchResult2.aspx?keyword=" + value
+                //						+ '&search_subjoin=' + sValue;
+                //				}
+                    checkRes.value = "";
+            }
+        };
+		//人机验证
+        function getResponse(resp) {
+//            console.log(resp);  // resp 即验证成功后获取的值
+//            var checkRes = document.getElementById('check_response');
+//            //window.confirm(checkRes);
+//            checkRes.value = "check_ok";
+            var url = "writeSession.aspx";
+            var param = "responseResult=" + "check_ok";
+            sendRequestPost(url, param);
+            //window.confirm(checkRes.value);
+        }
+
+        var xmlHttpRequest;
+        function createXMLHttpRequest() {
+            try {
+                // Firefox, Opera 8.0+, Safari   
+                xmlHttpRequest = new XMLHttpRequest();
+            }
+            catch (e) {
+
+                // Internet Explorer   
+                try {
+                    xmlHttpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+
+                    try {
+                        xmlHttpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    catch (e) {
+                        alert("您的浏览器不支持AJAX！");
+                        return false;
+                    }
+                }
+            }
+        }
+        //发送请求函数
+        function sendRequestPost(url, param) {
+            createXMLHttpRequest();
+            xmlHttpRequest.open("GET", url + "?" + param, true);
+            xmlHttpRequest.onreadystatechange = processResponse;
+            xmlHttpRequest.send(null);
+        }
+        //处理返回信息函数
+        function processResponse() {
+            //alert("processResponse");
+            if (xmlHttpRequest.readyState == 4) {
+                if (xmlHttpRequest.status == 200) {
+                    var res = xmlHttpRequest.responseText;
+                    //alert(res);
+                } else {
+                    //alert("请求页面异常");
+                }
+            }
+        }
+</script>
+
+</html>

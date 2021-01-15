@@ -1,0 +1,297 @@
+/* CSS Document */
+
+/* 窗口面板布局 Window Panel
+ *
+ * HTML constructor:
+ *
+<div class="w-panel">
+  <div class="w-panel-tl">
+    <div class="w-panel-tr">
+      <div class="w-panel-tc"></div>
+    </div>
+  </div>
+  <div class="w-panel-ml">
+    <div class="w-panel-mr">
+      <div class="w-panel-mc"></div>
+    </div>
+  </div>
+  <div class="w-panel-bl">
+    <div class="w-panel-br">
+      <div class="w-panel-bc"></div>
+    </div>
+  </div>
+</div>
+ *
+ *
+ */
+ 
+/* 主包装内的面板容器 */
+form .w-panel, .wraper .w-panel { margin:10px auto; }
+.w-panel { }
+.w-panel-mc { }
+
+/* 全部子容器背景图 */
+.w-panel-tl, .w-panel-tr, .w-panel-tc,
+.w-panel-ml, .w-panel-mr, .w-panel-mc,
+.w-panel-bl, .w-panel-br, .w-panel-bc {
+	background:url(../img/w-panel.png);
+	_zoom:1;
+}
+
+/* 上下 */
+.w-panel-tl, .w-panel-tr, .w-panel-tc,
+.w-panel-bl, .w-panel-br, .w-panel-bc {
+	+zoom:1;
+	+font-size:0;
+	+line-height:0;
+}
+
+.w-panel-header, .w-panel-footer {
+	+line-height:normal;
+}
+
+.w-panel-tc,
+.w-panel-bc {
+	min-height:8px;
+	_height:8px;
+}
+
+/* 左右 */
+.w-panel-tl, .w-panel-tr,
+.w-panel-ml, .w-panel-mr,
+.w-panel-bl, .w-panel-br { }
+
+/* 左侧 */
+.w-panel-tl,
+.w-panel-ml,
+.w-panel-bl { _position:relative; margin:0 8px 0 0; }
+
+/* 右侧 */
+.w-panel-tr,
+.w-panel-mr,
+.w-panel-br { _position:relative; margin:0 -8px 0 8px; padding:0 8px 0 0; }
+
+/* 中间 */
+.w-panel-tc,
+.w-panel-mc,
+.w-panel-bc { +position:relative; }
+
+/* 各自 */
+.w-panel-tl { }
+.w-panel-tr { background-position:100% 0; }
+.w-panel-tc { background-position:-8px 0; }
+
+.w-panel-ml { background-position:0 -8px; }
+.w-panel-mr { background-position:100% -8px; }
+.w-panel-mc { background-position:-8px -8px; }
+
+.w-panel-bl { background-position:0 100%; }
+.w-panel-br { background-position:100% 100%; }
+.w-panel-bc { background-position:-8px 100%; }
+
+/* end */
+
+/* 黄色背景 */
+.w-panel-yellow .w-panel-tl, .w-panel-yellow .w-panel-tr, .w-panel-yellow .w-panel-tc,
+.w-panel-yellow .w-panel-ml, .w-panel-yellow .w-panel-mr, .w-panel-yellow .w-panel-mc,
+.w-panel-yellow .w-panel-bl, .w-panel-yellow .w-panel-br, .w-panel-yellow .w-panel-bc { background-image:url(../img/w-panel-yellow.png); }
+
+/* 菜单背景 */
+.m-panel .w-panel-tl, .m-panel .w-panel-tr, .m-panel .w-panel-tc,
+.m-panel .w-panel-ml, .m-panel .w-panel-mr, .m-panel .w-panel-mc,
+.m-panel .w-panel-bl, .m-panel .w-panel-br, .m-panel .w-panel-bc {
+	background-image:url(../img/m-panel.32.png);
+	background-image:url(../img/m-panel.8.png);
+}
+
+.m-panel .w-panel-tc,
+.m-panel .w-panel-bc { min-height:2px; _height:2px;}
+
+/* 左侧 */
+.m-panel .w-panel-tl,
+.m-panel .w-panel-ml,
+.m-panel .w-panel-bl { _position:relative; margin:0 2px 0 0; }
+
+/* 右侧 */
+.m-panel .w-panel-tr,
+.m-panel .w-panel-mr,
+.m-panel .w-panel-br { _position:relative; margin:0 -2px 0 2px; padding:0 2px 0 0; }
+
+/* 各自 */
+.m-panel .w-panel-tl { }
+.m-panel .w-panel-tr { background-position:100% 0; }
+.m-panel .w-panel-tc { background-position:-2px 0; }
+
+.m-panel .w-panel-ml { background-position:0 -26px; }
+.m-panel .w-panel-mr { background-position:100% -26px; }
+.m-panel .w-panel-mc { background-position:-2px -26px; }
+
+.m-panel .w-panel-bl { background-position:0 100%; }
+.m-panel .w-panel-br { background-position:100% 100%; }
+.m-panel .w-panel-bc { background-position:-2px 100%; }
+
+.m-panel h2 { height:26px; font-size:12px; line-height:26px; color:#fff; }
+.m-panel h2 .icons { margin:5px; }
+.m-panel h2 a { color:#fff; }
+
+
+
+.w-panel-body { zoom:1; }
+
+
+/* 窗口控件背景 */
+.Window .w-panel-tl, .Window .w-panel-tr, .Window .w-panel-tc,
+.Window .w-panel-ml, .Window .w-panel-mr, .Window .w-panel-mc,
+.Window .w-panel-bl, .Window .w-panel-br, .Window .w-panel-bc {
+	background-image:url(../img/window.32.png);
+	background-image:url(../img/window.8.png);
+}
+
+
+/* 窗口控件 */
+.Window {
+	visibility:hidden;
+	position:absolute;
+	top:-32767px;
+	left:-32767px;
+	z-index:32767;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	min-width:100px;
+	+width:100px;
+	-webkit-box-shadow: 0px 0px 8px #999;
+	-moz-box-shadow: 0px 0px 8px #999;
+	box-shadow: 0px 0px 8px #999;
+}
+.Window form {
+	margin:0;
+	padding:0;
+}
+
+.Window .w-panel-tc {
+	padding:8px 0 0;
+	min-height:0;
+	_height:0;
+}
+
+.Window .w-panel-tl,
+.Window .w-panel-ml,
+.Window .w-panel-bl {
+}
+
+.Window .w-panel-mc {
+	border:1px solid #7F9DB9;
+	min-height:63px;
+	_height:63px;
+	background:#fff;
+}
+.Window .w-panel-ml { background-position:0 -30px; }
+.Window .w-panel-mr { background-position:100% -30px; }
+.Window .w-panel-mc { background-position:50% -30px; }
+
+/* 窗口head区 */
+.Window-head, .Window-header {
+	height:22px;
+}
+/* 窗口title */
+.Window-title {
+	margin:0 50px 0 0;
+	font-size:12px;
+	font-weight:normal;
+	text-align:left;
+}
+.Window-ico{
+	margin:0 5px 0 0;
+}
+.Window-title-text{
+	position:relative;
+	top:1px;
+}
+
+
+/* 窗口control区 */
+.Window-control{
+	position:absolute;
+	top:8px;
+	right:8px;
+}
+.Window-control .ico, .Window-control i{
+	overflow:hidden;
+	display:none;
+	float:right;
+	margin:0 0 0 2px;
+	padding:15px 0 0 28px;
+	width:0;
+	height:0;
+	background-image:url(../img/window.32.png);
+	background-image:url(../img/window.8.png);
+	background-repeat:no-repeat;
+}
+.Window-control .disabled{
+	filter:alpha(opacity:20);
+	-moz-opacity:.2;
+	opacity:.2;
+}
+/* 关闭按钮 */
+.Window-close-button {
+	right:8px;
+	background-position:-1964px -8px;
+}
+.Window-close-button:hover {
+	background-position:-1874px -8px;
+}
+/* 最大化/向下还原按钮 */
+.Window-maximize-button {
+	right:36px;
+	background-position:-1934px -8px;
+}
+.Window-maximize-button:hover {
+	background-position:-1844px -8px;
+}
+/* 最小化/向上还原按钮 */
+.Window-minimize-button {
+	right:64px;
+	background-position:-1904px -8px;
+}
+.Window-minimize-button:hover {
+	background-position:-1814px -8px;
+}
+/* 向上/向下还原按钮 */
+.Window-restore-button {
+	right:36px;
+	background-position:-1784px -8px;
+}
+.Window-restore-button:hover {
+	background-position:-1754px -8px;
+}
+
+/* 页面弹出遮罩 */
+.w-mask {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:9999;
+	background-color:#000;
+	filter:alpha(opacity:60);
+	-moz-opacity:.6;
+	opacity:.6;
+}
+.loading{
+	background-image: url(../img/loading/0504314.gif);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	z-index:32767;
+}
+.loading-05043120{
+	background-image: url(../img/loading/05043120.gif);
+	background-color:transparent;
+}
+
+
+

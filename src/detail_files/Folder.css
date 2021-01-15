@@ -1,0 +1,460 @@
+/* CSS Document */
+
+/* 文件夹模块 Folder
+ *
+ * HTML constructor:
+ *
+<div class="Folder">
+  <div class="Folder-control">
+    <a href="javascript:void(0);" class="Folder-scroll-back">&lt;&lt;</a>
+    <a href="javascript:void(0);" class="Folder-scroll-forward">&gt;&gt;</a>
+  </div>
+  <div class="Folder-files-wrapper">
+    <div class="Folder-files-lining">
+      <!-- 大/小图标布局 -->
+      <ul class="Folder-files">
+        <li>
+          <div class="Folder-file-icon"><span><img src="../img/file-img-32px.8.png" alt="" /></span></div>
+          <div class="Folder-file-discription"><label><input type="text" name="Folder_discription_input" class="inputText" /><span></span></label></div>
+          <div class="Folder-file-handle"><a href="javascript:void(0);" class="Folder-remove-file ico" title="清除该图片">清除</a></div>
+        </li>
+      </ul>
+      <!-- 列表/详细信息布局 -->
+      <table cellspacing="0" class="Folder-files">
+        <tbody>
+          <tr>
+            <td class="Folder-file-icon"><span><img src="../img/file-img-32px.8.png" alt="" /></span></td>
+            <td class="Folder-file-discription"><label><input type="text" name="Folder_discription_input" class="inputText" /><span></span></label></td>
+            <td class="Folder-file-handle"><a href="javascript:void(0);" class="Folder-remove-file ico" title="清除该图片">清除</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="Folder-handle">
+    <label class="Folder-open-upfiles">
+      <a href="javascript:void(0);" class="button-aper"><i class="ico"></i><span class="lining">添加图片</span></a>
+    </label>
+    <label class="Folder-add-file">
+      <input type="file" name="Folder_file_input" class="inputFile" />
+      <a href="javascript:void(0);" class="button-aper"><i class="ico"></i><span class="lining">选择图片</span></a>
+    </label>
+    <label class="Folder-upload-files">
+      <a href="javascript:void(0);" class="button-aper"><i class="ico"></i><span class="lining">上传图片</span></a>
+    </label>
+    <label class="Folder-remove-files">
+      <a href="javascript:void(0);" class="button-aper"><i class="ico"></i><span class="lining">全部清除</span></a>
+    </label>
+  </div>
+</div>
+ *
+ *
+ */
+ 
+/* 缺省不显示 */
+.js .Folder-files{ display:none; }
+
+/* 若包装则显示 */
+.Folder-files-wrapper .Folder-files{ display:block; }
+
+/* 文件夹模块容器 */
+.Folder {
+	padding:0 10px;
+	_zoom:1;
+}
+.Folder .ico {
+	background-image:url(../img/icos.png);
+}
+.Folder .button-aper {
+	
+}
+/*.Folder .button-aper {
+	margin:0 12px 0 0;
+	padding:0 0 0 12px;
+}
+.Folder .button-aper .lining {
+	margin:0 -12px 0 0;
+	padding:4px 12px 4px 0;
+	padding:5px 12px 3px 0\9;
+}*/
+
+/* 文件夹说明（环境设定，设定初始科目等） */
+.Folder-envir {
+	height:150px;
+	cursor:pointer;
+	text-align:center;
+	color:#ccc;
+	font:bold 50px/150px '宋体';
+}
+
+/* 文件布局设置及对应的控制 */
+.Folder-control{
+	display:none;
+}
+.Folder-layout-x .Folder-control,
+.Folder-layout-y .Folder-control{
+	display:block;
+}
+.Folder-control-back, .Folder-control-forward{
+	_position:relative;
+	overflow:hidden;
+	_display:inline;
+	width:13px;
+	height:50px;
+	text-indent:-32767px;
+	background:url(../img/arrow-control-scroll.8.png) no-repeat;
+	cursor:default;
+}
+.Folder-control-back{
+	float:left;
+	margin:50px 1px 0 -13px;
+	_margin:50px -2px 0 -11px;
+	/*border-right:13px solid #ccc;*/
+	background-position:0 0;
+	opacity:.2;
+	filter:alpha(opacity=20);
+}
+.Folder-control-forward{
+	float:right;
+	margin:50px -13px 0 1px;
+	_margin:50px -15px 0 -2px;
+	/*border-left:13px solid #ccc;*/
+	background-position:100% 0;
+	opacity:.2;
+	filter:alpha(opacity=20);
+}
+.Folder-control .enabled{
+	/*border-color:#7F9DB9;
+	border-color: #069;*/
+	opacity:1;
+	filter:alpha(opacity=100);
+	cursor:pointer;
+}
+.w-panel-yellow .Folder-control .enabled{
+	/*border-color:#f60;*/
+}
+.Folder .Folder-control .Folder-control-back, .Folder .Folder-control .Folder-control-forward{
+	/*border-top:20px solid transparent;
+	border-bottom:20px solid transparent;
+	+border-top:20px solid #fff;
+	+border-bottom:20px solid #fff;
+	filter: Chroma(Color=#ffffff);*/
+}
+
+/* 文件信息列表容器 */
+.Folder-files-wrapper {
+	position:relative;
+	overflow:auto;
+	padding:1px;
+	border:1px solid #7F9DB9;
+	background-color:#fff;
+	_zoom:1;
+}
+.Folder-files-lining {
+	+zoom:1;
+}
+/* 横向不折行/溢出隐藏排列 */
+.Folder-layout .Folder-files-lining{
+}
+.Folder-layout-x .Folder-files-wrapper{
+	overflow:hidden;
+	margin:0 auto;
+	min-height:150px;
+}
+/* hack ie6- !! */
+*html .Folder-layout-x .Folder-files-wrapper{
+	_overflow:visible;
+}
+*html .Folder-layout-x .Folder-files-lining{
+	_position:relative;
+	_width:100%;
+	_overflow:hidden;
+	_overflow-y:visible;
+	height:150px;
+}
+/* hack ie6- !! end */
+
+/* 纵向溢出隐藏排列 */
+.Folder-layout-y .Folder-files-wrapper{
+	overflow:hidden;
+}
+
+/* 文件信息列表
+ * 大/小图标布局
+*/
+ul.Folder-files {
+	margin:0 5px;
+	_margin:0 5px 5px;
+	+zoom:1;
+}
+.Folder-layout-x ul.Folder-files{
+	white-space:nowrap;
+}
+/*html .Folder-layout-x ul.Folder-files{
+	display:inline;
+}*/
+.Folder-files li {
+	position:relative;
+	display:-moz-inline-box;
+	display:inline-block;
+	+display:inline;
+	+zoom:1;
+	margin:20px 5px 10px;
+	_margin:20px 5px 6px;
+	width:120px;
+	padding:5px;
+	min-height:110px;
+	_height:110px;
+	vertical-align:top;
+	background:url(../img/button-aper.32.png) -800px -1800px no-repeat;
+	_background:url(../img/button-aper.8.png) -800px -1800px no-repeat;
+}
+.Folder-files li:hover,
+.Folder-files li.hover {
+	background-position:-600px -1800px;
+}
+.Folder-files li.focus {
+	background-position:-400px -1800px;
+}
+li.Folder-file-first {
+	background-position:-400px -1800px;
+}
+.Folder-files div {
+}
+/* 图标 */
+div.Folder-file-icon {
+	width:120px;
+	height:90px;
+	text-align:center;
+}
+div.Folder-file-icon span {
+	overflow:hidden;
+	display:block;
+	width:120px;
+	height:90px;
+	background-color:#fff;
+}
+div.Folder-file-icon img {
+	cursor:pointer;
+	/*display:block;
+	width:120px;
+	height:90px;*/
+}
+/* 描述 */
+div.Folder-file-discription {
+	margin:0 auto;
+	text-align:center;
+}
+*html ul.Folder-files li.focus{
+	margin-bottom:-5px;
+}
+li.focus div.Folder-file-discription {
+}
+div.Folder-file-discription label {
+	position:relative;
+	display:block;
+	margin:4px auto 0;
+	+margin:0 auto -4px;
+	width:120px;
+	min-height:16px;
+	_height:16px;
+}
+li.focus div.Folder-file-discription label {
+	position:static;
+	margin:4px auto -8px;
+	+margin:3px auto -8px;
+	_margin:3px auto 0 -5px;
+	width:auto;
+	_height:auto;
+}
+div.Folder-file-discription textarea {
+	position:absolute;
+	display:block;
+	top:-32767px;
+	left:-32767px;
+	width:128px;
+	height:15px;
+	text-align:center;
+}
+li.focus div.Folder-file-discription textarea{
+	top:0;
+	left:0;
+	margin:0 0 0 -5px;
+	_margin:0 -10px 0 0;
+	_left:-2px;
+	position:relative;
+}
+div.Folder-file-discription span {
+	display:block;
+	padding:4px 0 0\0;
+	+padding:7px 0 0;
+	width:120px;
+	cursor:text;
+}
+li.focus div.Folder-file-discription span {
+	display:none;
+}
+div.Folder-file-discription .inputFile {
+}
+/* 操作 */
+div.Folder-file-handle {
+	position:absolute;
+	visibility:hidden;
+	top:-15px;
+	left:0;
+	padding:2px 5px 1px;
+	width:120px;
+	height:16px;
+	background:url(../img/button-aper.32.png) -600px -1800px no-repeat;
+	_background:url(../img/button-aper.8.png) -600px -1800px no-repeat;
+}
+li.focus div.Folder-file-handle {
+	background-position:-0px -1800px;
+}
+li.Folder-file-first div.Folder-file-handle {
+	visibility:visible;
+	background-position:-0px -1800px;
+}
+li.Folder-file-first h2 {
+	font-size:12px;
+	font-weight:normal;
+}
+li.Folder-file-first h2 a.icons {
+	margin-right:3px;
+}
+li:hover div.Folder-file-handle,
+li.hover div.Folder-file-handle {
+	visibility:visible;
+}
+div.Folder-file-handle a.icons {
+}
+.Folder-file-set-default{
+	float:left;
+}
+li.Folder-file-first .Folder-file-set-default{
+	display:none;
+}
+.Folder-file-remove{ float:right; margin-left:6px;}
+.Folder-file-edit { float:right; }
+li.Folder-file-first .icons-picture{
+	float:left;
+}
+li.Folder-file-first .Folder-file-remove{
+	/*display:none;*/
+}
+
+/* 调用原图窗口样式 */
+.Page-original-drawing{
+	width:202px;
+	height:152px;
+}
+.Page-original-drawing img{
+	visibility:hidden;
+	padding:1px;
+	width:200px;
+	height:150px;
+}
+.Page-original-drawing-loaded{
+	width:auto;
+	height:auto;
+}
+.Page-original-drawing-loaded img{
+	visibility:visible;
+	width:auto;
+	height:auto;
+}
+
+
+/* 文件信息表格
+ * 列表/详细信息布局
+*/
+table.Folder-files {
+	width:100%;
+}
+.Folder-files tr {
+}
+.Folder-files td {
+	padding:6px;
+	height:51px;
+	+height:39px;
+	background:url(../img/button-aper.32.png) 32767px no-repeat;
+	_background:url(../img/button-aper.8.png) 32767px no-repeat;
+	text-align:center;
+	vertical-align:middle;
+}
+
+/* 图标 */
+td.Folder-file-icon {
+	width:50px;
+	background-position:0 -1000px;
+}
+.Folder-files tr:hover td.Folder-file-icon,
+.Folder-files tr.hover td.Folder-file-icon {
+	background-position:0 -900px;
+}
+.Folder-files tr.focus td.Folder-file-icon {
+	background-position:0 -700px;
+}
+td.Folder-file-icon img {
+}
+
+/* 描述 */
+td.Folder-file-discription {
+	background-position:50% -1000px;
+}
+.Folder-files tr:hover td.Folder-file-discription,
+.Folder-files tr.hover td.Folder-file-discription {
+	background-position:50% -900px;
+}
+.Folder-files tr.focus td.Folder-file-discription {
+	background-position:50% -700px;
+}
+td.Folder-file-discription label {
+	display:block;
+	text-align:left;
+}
+td.Folder-file-discription .inputText {
+	width:90%;
+}
+td.Folder-file-discription .inputFile {
+}
+td.Folder-file-discription span {
+}
+
+/* 操作 */
+td.Folder-file-handle {
+	width:50px;
+	background-position:100% -1000px;
+}
+.Folder-files tr:hover td.Folder-file-handle,
+.Folder-files tr.hover td.Folder-file-handle {
+	background-position:100% -900px;
+}
+.Folder-files tr.focus td.Folder-file-handle {
+	background-position:100% -700px;
+}
+td.Folder-file-handle a{
+	background-position:-20px -599px;
+}
+
+/* 对文件的操作区
+ * 包括上传/删除等
+*/
+.Folder-handle {
+	_position:relative;
+	_zoom:1;
+	margin:0 10px;
+	padding:5px 0 0;
+	text-align:center;
+}
+.Folder-add-file {
+}
+.Folder-add-file .lining {
+}
+.Folder-add-file .ico {
+	background-position:-20px -539px;
+}
+
+
+
+/* end */

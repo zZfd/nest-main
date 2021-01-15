@@ -1,0 +1,1594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0115)http://search.anccnet.com/goodsDetail.aspx?base_id=DD7D9F9DAA7E7EC3B14610260177FB7322C5FDDA1C8BCF296B5DDE375B790584 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"><meta id="metaKeyWords" name="keywords" content="GDS,GDSN,商品条码,条码,GS1China,中国物品编码中心,GTIN, 06902022134333,"><meta name="description" content="UNSPSC 联合国标准产品服务与分类代码 分类产品列表 "><meta name="save" content="history"><link rel="stylesheet" type="text/css" href="./detail_files/common.css"><link rel="stylesheet" type="text/css" href="./detail_files/paginationWeb.css"><link rel="stylesheet" type="text/css" href="./detail_files/icons.css"><link rel="stylesheet" type="text/css" href="./detail_files/w-Panel.css"><link rel="stylesheet" type="text/css" href="./detail_files/Folder.css">
+    <style type="text/css">
+        body {padding: 0}
+    .json{background-color :Transparent; width:98%;  font-size :13px; table-layout:fixed;}
+    .json th, .json .th{ width:300px; font-weight:bold; }
+    .json td{ text-align:left; }
+    
+    .json .w-panel{ float:left; width:600px; }
+    #gdsSearch{ display:none; }
+   .footer { background: -webkit-linear-gradient(#E4ECF0, #fff 30%)!important;}
+   .intro { background: none!important;height: auto!important}
+   
+    @media screen and (max-width:768px) 
+    {
+    	#productsInfo tr td:first-of-type {width: 120px!important; }
+    	.intro li {padding: 0!important;width: 48%;margin-bottom: 5px;}
+    }
+  
+    	
+  
+    
+    </style>
+    
+    <title>
+	条码数据库，商品信息，生产企业，制造商，零售商，全球数据同步--产品详细信息
+</title><link rel="stylesheet" type="text/css" href="./detail_files/width100.css"><link rel="stylesheet" href="./detail_files/photoswipe.css">
+    <!--<link rel="stylesheet" href="dist/swiper/swiper.min.css" />-->
+    <link rel="stylesheet" href="./detail_files/default-skin.css"><link rel="stylesheet" href="./detail_files/goods.css">
+    <!--<script src="dist/swiper/swiper.min.js"></script>-->
+    <script src="./detail_files/jquery-1.11.2.js.下载"></script>
+    <script src="./detail_files/photoswipe.min.js.下载"></script>
+    <script src="./detail_files/photoswipe-ui-default.min.js.下载"></script>
+	<!--<script type="text/javascript" src="JS/zCool.js"></script> 
+
+<script type="text/javascript" src="js/zCool.UI.js"></script>
+<script type="text/javascript" src="js/zCool.Form.js"></script>
+
+    <script type="text/javascript" src="/js/zCool.Folder.js"></script>
+
+    <script type="text/javascript" src="/js/zCool.Window.js"></script>-->
+<!--<script type="text/javascript">
+
+    (function($) {
+        var pic = $.ns('GDS.Product.ProductCreate.Picture', window);
+        pic.album = $.Folder.createFolder({
+            element: $.byId('photoAlbum'), // 若所需根元素已存在DOM中
+            layout: 'x', // 文件集布局方式（横向）
+            firstFileId: 'dscrpt_type_code'
+
+        });
+
+        /*var img; 
+
+$.addEvent(pic.album.files, 'click', function(e){
+        if(e.target.tagName  == 'IMG'){
+        img = e.target;
+        $.addEvent(pic.album.originalImgPage.element.firstChild, 
+        'load', 
+        fixWindow);
+        }
+        });
+
+function fixWindow(e){
+        var instance = $.Window.getInstance(this),
+        element = instance.element,
+        ec = element.clientWidth,
+        ex = $.pageX(element),
+        bc = document.documentElement.clientWidth || document.body.clientWidth;
+		
+		if((ec + ex) > dc ){
+        if(ec > dc){
+        this.style.width = dc - 118 + 'px';
+        element.style.width = dc - 100 + 'px';
+        element.style.left = '50px';
+        }
+        else{
+        element.style.left = $.pageX(img) + img.clientWidth - ec + 'px';
+        }
+        }
+		
+	};*/
+
+    })(zCool);
+		
+    </script>-->
+
+	<script type="text/javascript">
+	    function SetValue(key, value) {
+	        var cell = document.getElementById(key);
+	        //alert(key);
+	       
+	        if (cell == null) {
+	            return false;
+	        }
+	        if (value.length == 0) {
+	            cell.parentNode.parentNode.style.display = "none";
+	            return false;
+	        }
+	        cell.innerHTML = value;
+	    }
+
+	    //遍历所有行，如果第二个单元格中没有内容的，隐藏此行
+	    function delNullRow() {
+	        var tab = document.getElementById("productsInfo");
+	        for (i = 0; i < tab.rows.length; i++) {
+	            if (tab.rows[i].cells[1].firstChild.tagName == "SPAN") {
+	                if (tab.rows[i].cells[1].firstChild.innerText == "") {
+	                    tab.rows[i].style.display = "none";
+	                }
+	            }
+	        }
+	    }
+		
+	</script>
+</head>
+<body onload="init()">
+    
+
+
+<form name="form1" method="post" action="http://search.anccnet.com/goodsDetail.aspx?base_id=DD7D9F9DAA7E7EC3B14610260177FB7322C5FDDA1C8BCF296B5DDE375B790584" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIxNjg4NzMxNA8WBh4Jbl9pdGVtX2lkAo6AigMeBGNhcmQFBzEwMjE2NDkeBGd0aW4FDjA2OTAyMDIyMTM0MzMzFgQCAQ9kFgICAg8WAh4HY29udGVudAVUR0RTLEdEU04s5ZWG5ZOB5p2h56CBLOadoeeggSxHUzFDaGluYSzkuK3lm73nianlk4HnvJbnoIHkuK3lv4MsR1RJTiwgMDY5MDIwMjIxMzQzMzMsZAIDD2QWBAIDD2QWAgIBDxYCHglpbm5lcmh0bWwF4A08ZmlndXJlIGl0ZW1wcm9wPSdhc3NvY2lhdGVkTWVkaWEnIGl0ZW1zY29wZSBpdGVtdHlwZT0naHR0cDovL3NjaGVtYS5vcmcvSW1hZ2VPYmplY3QnPjxhIGhyZWY9J2h0dHBzOi8vd3d3Lmdkcy5vcmcuY24vL3VzZXJmaWxlL3VwbG9hZGEvZ3JhLzE2MDYxNTA5MjQvMDY5MDIwMjIxMzQzMzMvMDY5MDIwMjIxMzQzMzMuMS5qcGcnIGl0ZW1wcm9wPSdjb250ZW50VXJsJyBkYXRhLXNpemU9JzEwMjR4MTAyNCc+PGltZyBzcmM9J2h0dHBzOi8vd3d3Lmdkcy5vcmcuY24vL3VzZXJmaWxlL3VwbG9hZGEvZ3JhLzE2MDYxNTA5MjQvMDY5MDIwMjIxMzQzMzMvbTA2OTAyMDIyMTM0MzMzLjEuanBnJyBpdGVtcHJvcD0ndGh1bWJuYWlsJyBhbHQ9J0ltYWdlIGRlc2NyaXB0aW9uJyBib3JkZXIgPScxJyAvPjxzcGFuIGNsYXNzPSdpbWctbWlkZGxlJz48L3NwYW4+PC9hPjwvZmlndXJlPjxmaWd1cmUgaXRlbXByb3A9J2Fzc29jaWF0ZWRNZWRpYScgaXRlbXNjb3BlIGl0ZW10eXBlPSdodHRwOi8vc2NoZW1hLm9yZy9JbWFnZU9iamVjdCc+PGEgaHJlZj0naHR0cHM6Ly93d3cuZ2RzLm9yZy5jbi8vdXNlcmZpbGUvdXBsb2FkYS9ncmEvMTYwNjE1MDkyNC8wNjkwMjAyMjEzNDMzMy8wNjkwMjAyMjEzNDMzMy4yLmpwZycgaXRlbXByb3A9J2NvbnRlbnRVcmwnIGRhdGEtc2l6ZT0nMTAyNHgxMDI0Jz48aW1nIHNyYz0naHR0cHM6Ly93d3cuZ2RzLm9yZy5jbi8vdXNlcmZpbGUvdXBsb2FkYS9ncmEvMTYwNjE1MDkyNC8wNjkwMjAyMjEzNDMzMy9tMDY5MDIwMjIxMzQzMzMuMi5qcGcnIGl0ZW1wcm9wPSd0aHVtYm5haWwnIGFsdD0nSW1hZ2UgZGVzY3JpcHRpb24nIGJvcmRlciA9JzEnIC8+PHNwYW4gY2xhc3M9J2ltZy1taWRkbGUnPjwvc3Bhbj48L2E+PC9maWd1cmU+PGZpZ3VyZSBpdGVtcHJvcD0nYXNzb2NpYXRlZE1lZGlhJyBpdGVtc2NvcGUgaXRlbXR5cGU9J2h0dHA6Ly9zY2hlbWEub3JnL0ltYWdlT2JqZWN0Jz48YSBocmVmPSdodHRwczovL3d3dy5nZHMub3JnLmNuLy91c2VyZmlsZS91cGxvYWRhL2dyYS8xNjA2MTUwOTI0LzA2OTAyMDIyMTM0MzMzLzA2OTAyMDIyMTM0MzMzLjcuanBnJyBpdGVtcHJvcD0nY29udGVudFVybCcgZGF0YS1zaXplPScxMDI0eDEwMjQnPjxpbWcgc3JjPSdodHRwczovL3d3dy5nZHMub3JnLmNuLy91c2VyZmlsZS91cGxvYWRhL2dyYS8xNjA2MTUwOTI0LzA2OTAyMDIyMTM0MzMzL20wNjkwMjAyMjEzNDMzMy43LmpwZycgaXRlbXByb3A9J3RodW1ibmFpbCcgYWx0PSdJbWFnZSBkZXNjcmlwdGlvbicgYm9yZGVyID0nMScgLz48c3BhbiBjbGFzcz0naW1nLW1pZGRsZSc+PC9zcGFuPjwvYT48L2ZpZ3VyZT48ZmlndXJlIGl0ZW1wcm9wPSdhc3NvY2lhdGVkTWVkaWEnIGl0ZW1zY29wZSBpdGVtdHlwZT0naHR0cDovL3NjaGVtYS5vcmcvSW1hZ2VPYmplY3QnPjxhIGhyZWY9J2h0dHBzOi8vd3d3Lmdkcy5vcmcuY24vL3VzZXJmaWxlL3VwbG9hZGEvZ3JhLzE2MDYxNTA5MjQvMDY5MDIwMjIxMzQzMzMvMDY5MDIwMjIxMzQzMzMuOC5qcGcnIGl0ZW1wcm9wPSdjb250ZW50VXJsJyBkYXRhLXNpemU9JzEwMjR4MTAyNCc+PGltZyBzcmM9J2h0dHBzOi8vd3d3Lmdkcy5vcmcuY24vL3VzZXJmaWxlL3VwbG9hZGEvZ3JhLzE2MDYxNTA5MjQvMDY5MDIwMjIxMzQzMzMvbTA2OTAyMDIyMTM0MzMzLjguanBnJyBpdGVtcHJvcD0ndGh1bWJuYWlsJyBhbHQ9J0ltYWdlIGRlc2NyaXB0aW9uJyBib3JkZXIgPScxJyAvPjxzcGFuIGNsYXNzPSdpbWctbWlkZGxlJz48L3NwYW4+PC9hPjwvZmlndXJlPmQCBQ8WAh4HVmlzaWJsZWhkZEAOBkPCG+h/G1PUZcirj97xpztk">
+</div>
+
+<script>
+function init(){
+SetValue('txt_gtin','<img src =http://219.232.114.116:8080/barcode4j/gensvg?type=ean13&msg=6902022134333&fmt=png&hrsize=5pt&hrfont=song&qz=0.2cm&wf=1&mw=0.17mm&height=1cm />'); 
+SetValue('Att_Sys_zh-cn_31_G','瓶'); 
+SetValue('Att_Sys_zh-cn_101_G','15'); 
+SetValue('Att_Sys_zh-cn_104_G','厘米'); 
+SetValue('Att_Sys_zh-cn_106_G','22.5'); 
+SetValue('Att_Sys_zh-cn_118_G','6.9'); 
+SetValue('Att_Sys_en-us_141_G','1kg深层洁净护理洗衣液（薰衣草香）'); 
+SetValue('Att_Sys_zh-cn_171_G','中国大陆'); 
+SetValue('Att_Sys_zh-cn_188_G','是'); 
+SetValue('Att_Sys_zh-cn_326_G','厘米'); 
+SetValue('Att_Sys_zh-cn_331_G','厘米'); 
+SetValue('Att_Sys_zh-cn_332_G','1kg'); 
+SetValue('Att_Sys_zh-cn_11_G','蓝月亮'); 
+SetValue('Att_Sys_zh-cn_35_G','盒'); 
+SetValue('Att_Sys_zh-cn_36_G','洗衣液'); 
+SetValue('Att_Sys_zh-cn_54_G','1098'); 
+SetValue('Att_Sys_zh-cn_117_G',''); 
+SetValue('Att_Sys_zh-cn_196_G','0'); 
+SetValue('Att_Sys_zh-cn_356_G',''); 
+SetValue('Att_Sys_zh-cn_405_G','广东省广州市'); 
+SetValue('Att_Sys_zh-cn_409_G','4401'); 
+SetValue('Att_Sys_zh-cn_304_G','蓝月亮') ;
+SetValue('Att_Sys_zh-cn_141_G','1kg深层洁净护理洗衣液（薰衣草香）') ;
+SetValue('Att_Sys_zh-cn_402_G','("")'); 
+SetValue('Att_Sys_zh-cn_107_G','是'); 
+SetValue('Att_Sys_zh-cn_107_G','是'); 
+SetValue('Att_Sys_zh-cn_107_G','否'); 
+SetValue('Att_Sys_zh-cn_74_G','中国大陆'); 
+delNullRow();}
+</script>
+        <div class="wrap">
+            
+<div class="header">
+            <h1>
+                <a href="http://www.gds.org.cn/">
+                    <img name="logoBar" src="http://www.anccnet.com/img/logoBar1.gif" alt="中国商品信息服务平台"></a></h1>
+            <div id="gdsSearch" class="search">
+                <p> <label for="keyword">
+		<input id="keyword" name="keyword" type="text" maxlength="2048" size="55" class="inputText" tabindex="1" placeholder="请输入商品条码、商品名称、商标、规格、企业名称等关键字"></label>
+          <label id="CheckCodeBox" style="display:none;" for="search_subjoin">请输入验证码：
+	<input name="search_subjoin" id="search_subjoin" size="4" class="inputText" autocomplete="off" required="" data-async-valid="/comm/ajax.aspx">
+	<img alt="" id="search_CheckCodeImg" src="./detail_files/select_CheckCodeImg.aspx" align="texttop" onclick="GetUrl(this);">
+	</label>
+                    <button type="button" id="gdsBtn" name="gdsBtn" style="left: 0px; top: 0px" onclick="return gdsBtn_onclick()" tabindex="2">商品搜索</button>
+                </p>
+            </div>
+        </div>
+ 
+            <div id="bodyer" class="bodyer">
+            
+                <!-- ================== 产品图展示 ===================== -->
+<div id="slide">
+    <div class="outBorder">
+        <div class="outBox">
+            <div class="innerBox">
+
+                <div id="imageListDiv" class="my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1"><figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a href="https://www.gds.org.cn//userfile/uploada/gra/1606150924/06902022134333/06902022134333.1.jpg" itemprop="contentUrl" data-size="1024x1024"><img src="./detail_files/m06902022134333.1.jpg" itemprop="thumbnail" alt="Image description" border="1"><span class="img-middle"></span></a></figure><figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a href="https://www.gds.org.cn//userfile/uploada/gra/1606150924/06902022134333/06902022134333.2.jpg" itemprop="contentUrl" data-size="1024x1024"><img src="./detail_files/m06902022134333.2.jpg" itemprop="thumbnail" alt="Image description" border="1"><span class="img-middle"></span></a></figure><figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a href="https://www.gds.org.cn//userfile/uploada/gra/1606150924/06902022134333/06902022134333.7.jpg" itemprop="contentUrl" data-size="1024x1024"><img src="./detail_files/m06902022134333.7.jpg" itemprop="thumbnail" alt="Image description" border="1"><span class="img-middle"></span></a></figure><figure itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"><a href="https://www.gds.org.cn//userfile/uploada/gra/1606150924/06902022134333/06902022134333.8.jpg" itemprop="contentUrl" data-size="1024x1024"><img src="./detail_files/m06902022134333.8.jpg" itemprop="thumbnail" alt="Image description" border="1"><span class="img-middle"></span></a></figure></div>
+
+                <!-- 没有产品图片时 -->
+                
+
+                <!-- 警告信息 -->
+                <!--<div class="imgWarning">
+                    该商品暂不对外公开，您不能查看商品详细信息！<br>
+                    请尝试开通平台提供的订阅功能，详情请咨询400-7000-690。
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="mainly">
+                    <div class="main">
+                        <h2>
+                           <div style="padding-top :10px">  <span id="Label1">商品详细信息</span> </div>  <div style="padding-top :10px"> </div></h2>
+                         
+                        <div class="mainDiv"><center>  
+							<div id="productInfoNew"><table id="productsInfo" class="json">
+	<tbody><tr>
+		<td style="width:200px" class="th">商品条码</td>
+		<td id="txt_gtin"><img src="./detail_files/gensvg"></td>
+	</tr>
+	<tr>
+		<td class="th">产品名称</td>
+		<td><span id="Att_Sys_zh-cn_141_G">1kg深层洁净护理洗衣液（薰衣草香）</span></td>
+	</tr>
+	<tr>
+		<td class="th">产品名称(英文)</td>
+		<td><span id="Att_Sys_en-us_141_G">1kg深层洁净护理洗衣液（薰衣草香）</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">UNSPSC分类</td>
+		<td><span id="Att_Sys_zh-cn_22_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">品牌名称</td>
+		<td><span id="Att_Sys_zh-cn_304_G">蓝月亮</span></td>
+	</tr>
+	<tr>
+		<td class="th">规格型号</td>
+		<td><span id="Att_Sys_zh-cn_332_G">1kg</span></td>
+	</tr>
+	<tr>
+		<td class="th">宽度</td>
+		<td><span id="Att_Sys_zh-cn_101_G">15</span><span id="Att_Sys_zh-cn_104_G">厘米</span></td>
+	</tr>
+	<tr>
+		<td class="th">高度</td>
+		<td><span id="Att_Sys_zh-cn_106_G">22.5</span><span id="Att_Sys_zh-cn_326_G">厘米</span></td>
+	</tr>
+	<tr>
+		<td class="th">深度</td>
+		<td><span id="Att_Sys_zh-cn_118_G">6.9</span><span id="Att_Sys_zh-cn_331_G">厘米</span></td>
+	</tr>
+	<tr>
+		<td class="th">原产国</td>
+		<td><span id="Att_Sys_zh-cn_74_G">中国大陆</span></td>
+	</tr>
+	<tr>
+		<td class="th">产地</td>
+		<td><span id="Att_Sys_zh-cn_405_G">广东省广州市</span></td>
+	</tr>
+	<tr>
+		<td class="th">装配国</td>
+		<td><span id="Att_Sys_zh-cn_171_G">中国大陆</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">条码类型</td>
+		<td><span id="Att_Sys_zh-cn_167_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品所处层级</td>
+		<td><span id="Att_Sys_zh-cn_122_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">是否为基本单元</td>
+		<td><span id="Att_Sys_zh-cn_107_G">否</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为零售单元</td>
+		<td><span id="Att_Sys_zh-cn_204_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为变量单元</td>
+		<td><span id="Att_Sys_zh-cn_312_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">二级品牌</td>
+		<td><span id="Att_Sys_zh-cn_151_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">关键字</td>
+		<td><span id="Att_Sys_zh-cn_11_G">蓝月亮</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">供货开始日期</td>
+		<td><span id="Att_Sys_zh-cn_90_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装材料</td>
+		<td><span id="Att_Sys_zh-cn_51_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">包装类型</td>
+		<td><span id="Att_Sys_zh-cn_31_G">瓶</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装材料计量</td>
+		<td><span id="Att_Sys_zh-cn_43_G"></span><span id="Att_Sys_zh-cn_66_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上是否有可退还标记</td>
+		<td><span id="Att_Sys_zh-cn_271_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">包装上是否标明成分</td>
+		<td><span id="Att_Sys_zh-cn_188_G">是</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上优惠信息</td>
+		<td><span id="Att_Sys_zh-cn_32_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上零售价格</td>
+		<td><span id="Att_Sys_zh-cn_44_G"></span><span id="Att_Sys_zh-cn_242_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上环保标记</td>
+		<td><span id="Att_Sys_zh-cn_68_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上循环再生标记</td>
+		<td><span id="Att_Sys_zh-cn_111_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上民族标记</td>
+		<td><span id="Att_Sys_zh-cn_308_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上不含成份的标记</td>
+		<td><span id="Att_Sys_zh-cn_161_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上的有效期类型</td>
+		<td><span id="Att_Sys_zh-cn_30_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上食物规定和过敏原</td>
+		<td><span id="Att_Sys_zh-cn_230_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">可退包装押金总计</td>
+		<td><span id="Att_Sys_zh-cn_53_L"></span><span id="Att_Sys_zh-cn_193_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">可退包装押金代码</td>
+		<td><span id="Att_Sys_zh-cn_157_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最早可退押金日期</td>
+		<td><span id="Att_Sys_zh-cn_38_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最迟可退押金日期</td>
+		<td><span id="Att_Sys_zh-cn_147_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装使用条款</td>
+		<td><span id="Att_Sys_zh-cn_322_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">钉子孔编号</td>
+		<td><span id="Att_Sys_zh-cn_286_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">钉子孔水平距离</td>
+		<td><span id="Att_Sys_zh-cn_103_G"></span><span id="Att_Sys_zh-cn_328_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">钉子孔垂直距离</td>
+		<td><span id="Att_Sys_zh-cn_126_G"></span><span id="Att_Sys_zh-cn_245_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">直径</td>
+		<td><span id="Att_Sys_zh-cn_33_G"></span><span id="Att_Sys_zh-cn_40_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">固形物重量</td>
+		<td><span id="Att_Sys_zh-cn_293_G"></span><span id="Att_Sys_zh-cn_310_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">毛重</td>
+		<td><span id="Att_Sys_zh-cn_54_G">1098</span><span id="Att_Sys_zh-cn_84_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">净含量</td>
+		<td><span id="Att_Sys_zh-cn_148_G"></span><span id="Att_Sys_zh-cn_162_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">净重</td>
+		<td><span id="Att_Sys_zh-cn_10_G"></span><span id="Att_Sys_zh-cn_189_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">包装上是否标明净含量</td>
+		<td><span id="Att_Sys_zh-cn_314_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">计价类型 </td>
+		<td><span id="Att_Sys_zh-cn_254_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">计价量</td>
+		<td><span id="Att_Sys_zh-cn_173_G"></span><span id="Att_Sys_zh-cn_277_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">排面宽度</td>
+		<td><span id="Att_Sys_zh-cn_274_G"></span><span id="Att_Sys_zh-cn_281_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">普通成分</td>
+		<td><span id="Att_Sys_zh-cn_89_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">普通成分浓度</td>
+		<td><span id="Att_Sys_zh-cn_79_G"></span><span id="Att_Sys_zh-cn_313_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">成分浓度</td>
+		<td><span id="Att_Sys_zh-cn_15_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸标准</td>
+		<td><span id="Att_Sys_zh-cn_18_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸类型</td>
+		<td><span id="Att_Sys_zh-cn_266_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸</td>
+		<td><span id="Att_Sys_zh-cn_26_G"></span><span id="Att_Sys_zh-cn_105_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸描述</td>
+		<td><span id="Att_Sys_zh-cn_198_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸分组</td>
+		<td><span id="Att_Sys_zh-cn_298_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">价单价格</td>
+		<td><span id="Att_Sys_zh-cn_81_L"></span><span id="Att_Sys_zh-cn_227_L"></span></td>
+	</tr>
+	<tr>
+		<td class="th">建议零售价</td>
+		<td><span id="Att_Sys_zh-cn_196_G">0</span><span id="Att_Sys_zh-cn_225_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">订单至装运的时间</td>
+		<td><span id="Att_Sys_zh-cn_5_L"></span><span id="Att_Sys_zh-cn_75_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">订购基数</td>
+		<td><span id="Att_Sys_zh-cn_209_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">订购尺寸因素</td>
+		<td><span id="Att_Sys_zh-cn_140_L"></span><span id="Att_Sys_zh-cn_142_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税种代码</td>
+		<td><span id="Att_Sys_zh-cn_17_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税种描述</td>
+		<td><span id="Att_Sys_zh-cn_27_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税率</td>
+		<td><span id="Att_Sys_zh-cn_233_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税额</td>
+		<td><span id="Att_Sys_zh-cn_180_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">发票名称</td>
+		<td><span id="Att_Sys_zh-cn_156_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">附加描述</td>
+		<td><span id="Att_Sys_zh-cn_4_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">形态描述</td>
+		<td><span id="Att_Sys_zh-cn_36_G">洗衣液</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">外部描述链接</td>
+		<td><span id="Att_Sys_zh-cn_205_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品系列</td>
+		<td><span id="Att_Sys_zh-cn_181_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品组代码</td>
+		<td><span id="Att_Sys_zh-cn_6_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品组描述</td>
+		<td><span id="Att_Sys_zh-cn_52_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">变体</td>
+		<td><span id="Att_Sys_zh-cn_48_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">供货截止日期</td>
+		<td><span id="Att_Sys_zh-cn_97_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">取消日期</td>
+		<td><span id="Att_Sys_zh-cn_45_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">停产日期</td>
+		<td><span id="Att_Sys_zh-cn_325_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">上市时间</td>
+		<td><span id="Att_Sys_zh-cn_117_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最早订单日期</td>
+		<td><span id="Att_Sys_zh-cn_135_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最晚订单日期</td>
+		<td><span id="Att_Sys_zh-cn_163_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最早发货日期</td>
+		<td><span id="Att_Sys_zh-cn_1_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最晚发货日期</td>
+		<td><span id="Att_Sys_zh-cn_21_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">目标消费者年龄</td>
+		<td><span id="Att_Sys_zh-cn_128_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">目标消费者性别</td>
+		<td><span id="Att_Sys_zh-cn_210_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品的特征或优势</td>
+		<td><span id="Att_Sys_zh-cn_127_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">销售广告词</td>
+		<td><span id="Att_Sys_zh-cn_219_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">特殊产品类别</td>
+		<td><span id="Att_Sys_zh-cn_239_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">季节性供应年份</td>
+		<td><span id="Att_Sys_zh-cn_307_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">可供应季节</td>
+		<td><span id="Att_Sys_zh-cn_185_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">季节名称</td>
+		<td><span id="Att_Sys_zh-cn_16_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">季节性供应结束日期 </td>
+		<td><span id="Att_Sys_zh-cn_65_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">同币种优惠券代码</td>
+		<td><span id="Att_Sys_zh-cn_83_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">促销活动名称 </td>
+		<td><span id="Att_Sys_zh-cn_42_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">促销活动开始日期</td>
+		<td><span id="Att_Sys_zh-cn_72_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">促销活动截止日期</td>
+		<td><span id="Att_Sys_zh-cn_296_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品规则</td>
+		<td><span id="Att_Sys_zh-cn_13_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品运输名称</td>
+		<td><span id="Att_Sys_zh-cn_164_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品专业名称</td>
+		<td><span id="Att_Sys_zh-cn_24_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品分类</td>
+		<td><span id="Att_Sys_zh-cn_265_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品极限数量</td>
+		<td><span id="Att_Sys_zh-cn_136_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品代码  </td>
+		<td><span id="Att_Sys_zh-cn_94_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品包装级别</td>
+		<td><span id="Att_Sys_zh-cn_297_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">联合国危险品代码</td>
+		<td><span id="Att_Sys_zh-cn_23_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原料成分代码</td>
+		<td><span id="Att_Sys_zh-cn_252_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">燃点</td>
+		<td><span id="Att_Sys_zh-cn_217_G"></span><span id="Att_Sys_zh-cn_226_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">内包装数</td>
+		<td><span id="Att_Sys_zh-cn_246_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">内包装中次级贸易项目数量</td>
+		<td><span id="Att_Sys_zh-cn_208_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">完整层数（Hi）</td>
+		<td><span id="Att_Sys_zh-cn_186_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">完整层中的贸易项目数（Ti）</td>
+		<td><span id="Att_Sys_zh-cn_85_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">每托盘层数</td>
+		<td><span id="Att_Sys_zh-cn_145_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">每托盘层贸易项目数</td>
+		<td><span id="Att_Sys_zh-cn_264_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">每托盘贸易项目数</td>
+		<td><span id="Att_Sys_zh-cn_259_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">操作说明</td>
+		<td><span id="Att_Sys_zh-cn_152_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">堆放层数</td>
+		<td><span id="Att_Sys_zh-cn_149_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">堆放最大承重</td>
+		<td><span id="Att_Sys_zh-cn_37_G"></span><span id="Att_Sys_zh-cn_201_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">到货后有效期</td>
+		<td><span id="Att_Sys_zh-cn_159_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">贮藏最高温度</td>
+		<td><span id="Att_Sys_zh-cn_261_G"></span><span id="Att_Sys_zh-cn_317_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">贮藏最低温度</td>
+		<td><span id="Att_Sys_zh-cn_262_G"></span><span id="Att_Sys_zh-cn_270_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">贮藏最大湿度</td>
+		<td><span id="Att_Sys_zh-cn_100_G"></span><span id="Att_Sys_zh-cn_330_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">贮藏最小湿度</td>
+		<td><span id="Att_Sys_zh-cn_28_G"></span><span id="Att_Sys_zh-cn_195_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">送达配送中心最高温度</td>
+		<td><span id="Att_Sys_zh-cn_29_G"></span><span id="Att_Sys_zh-cn_253_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">送达配送中心最低温度</td>
+		<td><span id="Att_Sys_zh-cn_57_G"></span><span id="Att_Sys_zh-cn_324_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">送达市场最高温度</td>
+		<td><span id="Att_Sys_zh-cn_158_G"></span><span id="Att_Sys_zh-cn_257_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">送达市场最低温度</td>
+		<td><span id="Att_Sys_zh-cn_7_G"></span><span id="Att_Sys_zh-cn_251_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">托盘类型</td>
+		<td><span id="Att_Sys_zh-cn_222_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">托盘使用条款</td>
+		<td><span id="Att_Sys_zh-cn_99_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">生产许可证号</td>
+		<td><span id="Att_Sys_zh-cn_337_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">卫生许可证号</td>
+		<td><span id="Att_Sys_zh-cn_338_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品执行标准代号</td>
+		<td><span id="Att_Sys_zh-cn_430_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">绿色食品证号</td>
+		<td><span id="Att_Sys_zh-cn_339_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">保健食品证号</td>
+		<td><span id="Att_Sys_zh-cn_340_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">特殊用途化妆品批准文号</td>
+		<td><span id="Att_Sys_zh-cn_406_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">进口化妆品批准文号</td>
+		<td><span id="Att_Sys_zh-cn_408_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">其他包装类型</td>
+		<td><span id="Att_Sys_zh-cn_355_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">保质期(天)</td>
+		<td><span id="Att_Sys_zh-cn_356_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">其他包装材料</td>
+		<td><span id="Att_Sys_zh-cn_362_L"></span></td>
+	</tr>
+	<tr>
+		<td class="th">产地代码</td>
+		<td><span id="Att_Sys_zh-cn_409_G">4401</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税号</td>
+		<td><span id="Att_Sys_zh-cn_410_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">配料</td>
+		<td><span id="Att_Sys_zh-cn_411_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">年份</td>
+		<td><span id="Att_Sys_zh-cn_412_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">质量等级</td>
+		<td><span id="Att_Sys_zh-cn_413_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">啤酒类型</td>
+		<td><span id="Att_Sys_zh-cn_414_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">糖度/总糖量</td>
+		<td><span id="Att_Sys_zh-cn_415_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">进口酒类经营许可证代码</td>
+		<td><span id="Att_Sys_zh-cn_416_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品标准名称</td>
+		<td><span id="Att_Sys_zh-cn_417_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">香型</td>
+		<td><span id="Att_Sys_zh-cn_418_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品添加剂</td>
+		<td><span id="Att_Sys_zh-cn_419_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">加工方式</td>
+		<td><span id="Att_Sys_zh-cn_420_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">地理标志产品名称</td>
+		<td><span id="Att_Sys_zh-cn_421_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否具有防伪标识</td>
+		<td><span id="Att_Sys_zh-cn_422_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">QS分类</td>
+		<td><span id="Att_Sys_zh-cn_424_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">产品执行标准名称</td>
+		<td><span id="Att_Sys_zh-cn_425_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪方式描述</td>
+		<td><span id="Att_Sys_zh-cn_426_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪类型</td>
+		<td><span id="Att_Sys_zh-cn_427_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪供应商名称</td>
+		<td><span id="Att_Sys_zh-cn_428_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪供应商组织机构代码</td>
+		<td><span id="Att_Sys_zh-cn_429_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">3C认证</td>
+		<td><span id="Att_Sys_zh-cn_434_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">适用车型</td>
+		<td><span id="Att_Sys_zh-cn_435_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">使用寿命</td>
+		<td><span id="Att_Sys_zh-cn_436_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">主要下游企业信息</td>
+		<td><span id="Att_Sys_zh-cn_437_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">医疗器械或药品注册人/备案人名称</td>
+		<td><span id="Att_Sys_zh-cn_438_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">医疗器械或药品注册证编号/备案凭证编号</td>
+		<td><span id="Att_Sys_zh-cn_439_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">其它产品编码</td>
+		<td><span id="Att_Sys_zh-cn_95_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">商标所有者GLN</td>
+		<td><span id="Att_Sys_zh-cn_78_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">商标所有者名称</td>
+		<td><span id="Att_Sys_zh-cn_329_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">附加分类类别代码</td>
+		<td><span id="Att_Sys_zh-cn_155_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">附加分类类别描述</td>
+		<td><span id="Att_Sys_zh-cn_194_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">附加分类机构名称</td>
+		<td><span id="Att_Sys_zh-cn_327_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">必需配件</td>
+		<td><span id="Att_Sys_zh-cn_386_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">直送消费者</td>
+		<td><span id="Att_Sys_zh-cn_382_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">eanucc代码</td>
+		<td><span id="Att_Sys_zh-cn_404_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">eanucc类型</td>
+		<td><span id="Att_Sys_zh-cn_403_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">环保标识</td>
+		<td><span id="Att_Sys_zh-cn_383_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否被辐照</td>
+		<td><span id="Att_Sys_zh-cn_357_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为转基因</td>
+		<td><span id="Att_Sys_zh-cn_358_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">酒精含量</td>
+		<td><span id="Att_Sys_zh-cn_359_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">干货脂肪含量</td>
+		<td><span id="Att_Sys_zh-cn_360_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原麦汁浓度</td>
+		<td><span id="Att_Sys_zh-cn_361_G"></span></td>
+	</tr>
+	<tr>
+		<td class="th">GPC分类类别代码</td>
+		<td><span id="Att_Sys_zh-cn_402_G">("")</span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">危险品分类</td>
+		<td><span id="Att_Sys_zh-cn_384_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否有防盗标签</td>
+		<td><span id="Att_Sys_zh-cn_398_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否提供特殊订货</td>
+		<td><span id="Att_Sys_zh-cn_380_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否可召回</td>
+		<td><span id="Att_Sys_zh-cn_374_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否包含木料</td>
+		<td><span id="Att_Sys_zh-cn_381_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">制造商GLN</td>
+		<td><span id="Att_Sys_zh-cn_199_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">制造商名称</td>
+		<td><span id="Att_Sys_zh-cn_294_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原料成分</td>
+		<td><span id="Att_Sys_zh-cn_134_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原料百分比</td>
+		<td><span id="Att_Sys_zh-cn_215_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原料安全数据表号码</td>
+		<td><span id="Att_Sys_zh-cn_150_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">型号</td>
+		<td><span id="Att_Sys_zh-cn_377_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">嵌套增量</td>
+		<td><span id="Att_Sys_zh-cn_363_L"></span><span id="Att_Sys_zh-cn_365_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">描述性尺寸</td>
+		<td><span id="Att_Sys_zh-cn_109_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪样张（图片）</td>
+		<td><span id="Att_Sys_zh-cn_432_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防伪生产许可证</td>
+		<td><span id="Att_Sys_zh-cn_433_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">销售单位</td>
+		<td><span id="Att_Sys_zh-cn_35_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">定购单位</td>
+		<td><span id="Att_Sys_zh-cn_88_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">有机产品标准主管机构</td>
+		<td><span id="Att_Sys_zh-cn_176_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">有机状况</td>
+		<td><span id="Att_Sys_zh-cn_247_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">净深</td>
+		<td><span id="Att_Sys_zh-cn_368_G"></span><span id="Att_Sys_zh-cn_370_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">净高</td>
+		<td><span id="Att_Sys_zh-cn_371_G"></span><span id="Att_Sys_zh-cn_372_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">净宽</td>
+		<td><span id="Att_Sys_zh-cn_373_G"></span><span id="Att_Sys_zh-cn_399_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">Point Value</td>
+		<td><span id="Att_Sys_zh-cn_385_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">退货政策</td>
+		<td><span id="Att_Sys_zh-cn_376_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">季节性供应开始日期 </td>
+		<td><span id="Att_Sys_zh-cn_63_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防盗标签提交日期</td>
+		<td><span id="Att_Sys_zh-cn_389_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防盗标签位置</td>
+		<td><span id="Att_Sys_zh-cn_144_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">防盗标签类型</td>
+		<td><span id="Att_Sys_zh-cn_305_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">建议货架展示数</td>
+		<td><span id="Att_Sys_zh-cn_387_L"></span><span id="Att_Sys_zh-cn_388_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">特殊订货生产周期（天）</td>
+		<td><span id="Att_Sys_zh-cn_390_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">特殊订货最小订购数</td>
+		<td><span id="Att_Sys_zh-cn_392_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">特殊订购增量</td>
+		<td><span id="Att_Sys_zh-cn_393_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否涉及美国专利</td>
+		<td><span id="Att_Sys_zh-cn_396_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">目标市场细分代码</td>
+		<td><span id="Att_Sys_zh-cn_223_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">税机构代码</td>
+		<td><span id="Att_Sys_zh-cn_123_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">被替代产品的其它产品编码</td>
+		<td><span id="Att_Sys_zh-cn_70_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">被替代产品的GTIN</td>
+		<td><span id="Att_Sys_zh-cn_323_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">颜色代码表管理机构</td>
+		<td><span id="Att_Sys_zh-cn_9_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">颜色代码</td>
+		<td><span id="Att_Sys_zh-cn_177_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">颜色描述</td>
+		<td><span id="Att_Sys_zh-cn_182_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">专卖权结束日期/时间</td>
+		<td><span id="Att_Sys_zh-cn_131_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最小订购数量开始日期</td>
+		<td><span id="Att_Sys_zh-cn_203_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最小订购数量截止日期</td>
+		<td><span id="Att_Sys_zh-cn_207_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最大订购数量开始日期</td>
+		<td><span id="Att_Sys_zh-cn_237_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最大订购数量截止日期</td>
+		<td><span id="Att_Sys_zh-cn_279_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">简短描述</td>
+		<td><span id="Att_Sys_zh-cn_132_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">外观描述</td>
+		<td><span id="Att_Sys_zh-cn_61_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">进口分类代码</td>
+		<td><span id="Att_Sys_zh-cn_55_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">进口分类类型</td>
+		<td><span id="Att_Sys_zh-cn_212_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">未售出是否可退回</td>
+		<td><span id="Att_Sys_zh-cn_3_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否标明可再生利用</td>
+		<td><span id="Att_Sys_zh-cn_47_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否有批号</td>
+		<td><span id="Att_Sys_zh-cn_58_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">织数</td>
+		<td><span id="Att_Sys_zh-cn_102_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">原料重量</td>
+		<td><span id="Att_Sys_zh-cn_224_G"></span><span id="Att_Sys_zh-cn_289_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最少订购数量</td>
+		<td><span id="Att_Sys_zh-cn_14_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">订货至交货的时间</td>
+		<td><span id="Att_Sys_zh-cn_46_L"></span><span id="Att_Sys_zh-cn_218_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">可否再次订购 </td>
+		<td><span id="Att_Sys_zh-cn_124_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最早送达日期/时间</td>
+		<td><span id="Att_Sys_zh-cn_153_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">协议最大购买量</td>
+		<td><span id="Att_Sys_zh-cn_154_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否依据数量定价</td>
+		<td><span id="Att_Sys_zh-cn_229_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">最大订购数量</td>
+		<td><span id="Att_Sys_zh-cn_256_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">协议最小购买量</td>
+		<td><span id="Att_Sys_zh-cn_272_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸代码表机构</td>
+		<td><span id="Att_Sys_zh-cn_166_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">尺寸代码</td>
+		<td><span id="Att_Sys_zh-cn_316_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">变量贸易项目类型</td>
+		<td><span id="Att_Sys_zh-cn_56_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为物流单元</td>
+		<td><span id="Att_Sys_zh-cn_82_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为可订购单元</td>
+		<td><span id="Att_Sys_zh-cn_87_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">是否为发票单元</td>
+		<td><span id="Att_Sys_zh-cn_139_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">定价依据</td>
+		<td><span id="Att_Sys_zh-cn_258_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">遵从法规</td>
+		<td><span id="Att_Sys_zh-cn_92_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">整车数量</td>
+		<td><span id="Att_Sys_zh-cn_394_L"></span><span id="Att_Sys_zh-cn_395_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">组件数目</td>
+		<td><span id="Att_Sys_zh-cn_366_L"></span><span id="Att_Sys_zh-cn_367_L"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">保修说明的URL </td>
+		<td><span id="Att_Sys_zh-cn_379_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">保修说明</td>
+		<td><span id="Att_Sys_zh-cn_378_G"></span></td>
+	</tr>
+	<tr style="display: none;">
+		<td class="th">营业执照</td>
+		<td><span id="Att_Sys_zh-cn_431_G"></span></td>
+	</tr>
+</tbody></table>
+</div>
+							                     
+                             
+							 
+                             </center>    
+                        </div>
+                        
+                    </div>
+                   
+                                               
+                
+                   
+               
+           
+          
+                
+                </div>
+                            </div> 
+                                
+                         
+
+<style type="text/css">
+    /** 页脚 */
+.footer{
+	padding:1px 1px 20px;
+	border-top:1px solid #CADAE2;
+	zoom:1;
+	text-align:center;
+	line-height:normal;
+	font-size :13px
+}
+.footer p{ margin:14px auto;}
+.intro{ padding-top:20px;height:25px;background:url(http://www.anccnet.com/img/web_header1.png) 0 -130px repeat-x;}
+.introList{
+	display:inline-block;
+	display:-moz-inline-box;
+	+display:inline;
+	+zoom:1;
+	overflow:hidden;
+	padding-left:0;
+}
+.intro li{
+	display:inline;
+	float:left;
+	margin-left:-1px;
+	padding:0 1.8em;
+	border-left:1px solid #000;
+}
+.copyright em{ font:14px Georgia, "Times New Roman", Times, serif}
+.phone{ display:none;}
+.icp{}
+.email{ display:none;}
+</style>
+<script type="text/javascript">
+function h(obj,url){obj.style.behavior='url(#default#homepage)';obj.setHomePage(url);}
+</script>
+<div class="footer">
+    <div class="intro">
+      <ul class="introList">
+        <li><a href="http://www.anccnet.com/aboutGds.aspx">关于平台</a></li>
+        <li><a href="http://www.anccnet.com/highService.aspx">高端服务</a></li>
+        <li><a href="http://www.anccnet.com/aboutANCC.aspx">中国物品编码中心</a></li>
+        <li><a href="http://www.anccnet.com/legal_notices.aspx">法律声明</a></li>
+        <li><a href="http://www.anccnet.com/service_iterm.aspx">服务条款</a></li>
+        <li><a href="http://search.anccnet.com/goodsDetail.aspx?base_id=DD7D9F9DAA7E7EC3B14610260177FB7322C5FDDA1C8BCF296B5DDE375B790584#" onclick="h(this,&#39;http://www.gds.org.cn/&#39;)">设为首页</a></li>
+      </ul>
+    </div>
+    <p class="copyright"><em>Copyright &#169; 2008 gds.org.cn All rights reserved</em> 中国物品编码中心 版权所有</p>
+    <p class="icp"><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备05012621号</a></p>
+  </div> 
+        </div> 
+    </form>
+    
+    
+        <!-- ============== 查看相册大图 ================= -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!--<button class="pswp__button pswp__button--share" title="Share"></button>-->
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- ============== 查看相册大图 结束 ================= -->
+
+
+<script>
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+        // parse slide data (url, title, size ...) from DOM elements
+        // (children of gallerySelector)
+        var parseThumbnailElements = function(el) {
+            var thumbElements = el.childNodes,
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+            for (var i = 0; i < numNodes; i++) {
+
+                figureEl = thumbElements[i]; // <figure> element
+
+                // include only element nodes
+                if (figureEl.nodeType !== 1) {
+                    continue;
+                }
+
+                linkEl = figureEl.children[0]; // <a> element
+
+                size = linkEl.getAttribute('data-size').split('x');
+
+                // create slide object
+                item = {
+                    src: linkEl.getAttribute('href'),
+                    w: parseInt(size[0], 10),
+                    h: parseInt(size[1], 10)
+                };
+
+
+
+                if (figureEl.children.length > 1) {
+                    // <figcaption> content
+                    item.title = figureEl.children[1].innerHTML;
+                }
+
+                if (linkEl.children.length > 0) {
+                    // <img> thumbnail element, retrieving thumbnail url
+                    item.msrc = linkEl.children[0].getAttribute('src');
+                }
+
+                item.el = figureEl; // save link to element for getThumbBoundsFn
+                items.push(item);
+            }
+
+            return items;
+        };
+
+        // find nearest parent element
+        var closest = function closest(el, fn) {
+            return el && (fn(el) ? el : closest(el.parentNode, fn));
+        };
+
+        // triggers when user clicks on thumbnail
+        var onThumbnailsClick = function(e) {
+            e = e || window.event;
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+            var eTarget = e.target || e.srcElement;
+
+            // find root element of slide
+            var clickedListItem = closest(eTarget, function(el) {
+                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+            });
+
+            if (!clickedListItem) {
+                return;
+            }
+
+            // find index of clicked item by looping through all child nodes
+            // alternatively, you may define index via data- attribute
+            var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+
+            for (var i = 0; i < numChildNodes; i++) {
+                if (childNodes[i].nodeType !== 1) {
+                    continue;
+                }
+
+                if (childNodes[i] === clickedListItem) {
+                    index = nodeIndex;
+                    break;
+                }
+                nodeIndex++;
+            }
+
+
+
+            if (index >= 0) {
+                // open PhotoSwipe if valid index found
+                openPhotoSwipe(index, clickedGallery);
+            }
+            return false;
+        };
+
+        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+        var photoswipeParseHash = function() {
+            var hash = window.location.hash.substring(1),
+                    params = {};
+
+            if (hash.length < 5) {
+                return params;
+            }
+
+            var vars = hash.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                if (!vars[i]) {
+                    continue;
+                }
+                var pair = vars[i].split('=');
+                if (pair.length < 2) {
+                    continue;
+                }
+                params[pair[0]] = pair[1];
+            }
+
+            if (params.gid) {
+                params.gid = parseInt(params.gid, 10);
+            }
+
+            return params;
+        };
+
+        var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+            var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+            items = parseThumbnailElements(galleryElement);
+
+            // define options (if needed)
+            options = {
+
+                // define gallery index (for URL)
+                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                getThumbBoundsFn: function(index) {
+                    // See Options -> getThumbBoundsFn section of documentation for more info
+                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+                    return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+                }
+
+            };
+
+            // PhotoSwipe opened from URL
+            if (fromURL) {
+                if (options.galleryPIDs) {
+                    // parse real index when custom PIDs are used
+                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                    for (var j = 0; j < items.length; j++) {
+                        if (items[j].pid == index) {
+                            options.index = j;
+                            break;
+                        }
+                    }
+                } else {
+                    // in URL indexes start from 1
+                    options.index = parseInt(index, 10) - 1;
+                }
+            } else {
+                options.index = parseInt(index, 10);
+            }
+
+            // exit if index not found
+            if (isNaN(options.index)) {
+                return;
+            }
+
+            if (disableAnimation) {
+                options.showAnimationDuration = 0;
+            }
+
+            // Pass data to PhotoSwipe and initialize it
+            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        // loop through all gallery elements and bind events
+        var galleryElements = document.querySelectorAll(gallerySelector);
+
+        for (var i = 0, l = galleryElements.length; i < l; i++) {
+            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+            galleryElements[i].onclick = onThumbnailsClick;
+        }
+
+        // Parse URL and open gallery if it contains #&pid=3&gid=1
+        var hashData = photoswipeParseHash();
+        if (hashData.pid && hashData.gid) {
+            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+        }
+    };
+
+    // execute above function
+
+    /* 添加data-size属性 */
+       /* var imgs = $('.my-gallery').find('img'),
+            rate;
+    imgs.each(function() {
+        rate = $(this).width() / $(this).height();
+        console.log(rate);
+        if (rate > 1) {
+            $(this).parent('a').attr('data-size', '1024x' + 1024 / rate + '');
+        } else {
+            $(this).parent('a').attr('data-size', 1024 * rate + 'x1024');
+        }
+
+    });*/
+    initPhotoSwipeFromDOM('.my-gallery');
+
+
+</script>
+</body></html>

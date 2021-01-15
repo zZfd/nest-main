@@ -1,0 +1,330 @@
+
+*{}
+html,body{ height:100%;font:13px/1.8em "宋体";color:#444;text-align:center;}
+body,div,ul,ol,li,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,p{ margin:0;padding:0;}
+ul,ol{ list-style:none;margin-left:0;padding-left:40px}
+li{}
+a{ color:#00c;}
+a:hover{}
+img{ border:0;}
+/* 外框 */
+.wrap{ margin:auto;width:940px;}
+.header,.bodyer,.footer{ margin:10px auto;}
+/** 页首 */
+.header{
+	height:131px;
+	border-bottom:1px solid #ccc;
+	background:url(../img/web_header1.png) 50% 35px repeat-x;
+}
+h1{ }
+h1 a{ }
+h1 img{ }
+/* 前置图标（用在默认内联样式元素上） */
+.ico, .icon, .require
+{ overflow:hidden; display:inline-block; padding:16px 0 0 16px; width:0px; height:0; background:url(../img/icos.png) no-repeat; text-align:center; vertical-align:middle;}
+/*** GDS搜索 */
+#gdsSearch{
+	margin:28px 0 0;
+}
+.inputText,.passwordInput{
+	border:1px solid #7F9DB9;
+	border-color:#698198 #7F9DB9 #7F9DB9 #698198;
+	background:url(../img/web_header1.png) -1px -101px no-repeat;
+	
+}
+#gdsSearch p{}
+#keyword{
+	padding-top:3px;
+	width:400px;
+	height:19px;
+	font-size:14px;
+}
+#gdsBtn{
+	margin:0 0 0 .5em;
+	border:0;
+	width:101px;
+	height:28px;
+	background:url(../img/web_gdsBtn.gif) no-repeat;
+	font-size:14px;
+	vertical-align:top;
+}
+:root #gdsBtn{ margin:-1px 0 0;padding-bottom:5px;}
+
+/** 页体 */
+.bodyer{ overflow:hidden;+zoom:1;text-align:left;}
+.bodyer h2{
+	min-height:45px;
+	background:#F2F6F8 url(../img/web_header1.png) 0 -130px repeat-x;
+	font:bold 14px/45px "幼圆", "楷体_GB2312", "仿宋_GB2312";
+	text-align:center;
+	color:#000;
+}
+#service h2,#login h2{ +padding-top:5px;}
+.bodyer h3{ font:bold 13px/1.8em "宋体";}
+.bodyer p{ margin:12px auto;line-height:1.8em;}
+/*** 主体 */
+/**** 主要部分 */
+.main{
+	overflow:hidden;
+	padding:1px;
+	border:1px solid #CADAE2;
+	background:#F2F6F8;
+}
+.mainDiv{ margin:auto 10px;}
+
+.mainDiv1{
+	margin:10px;
+	padding:10px 40px;
+	border:1px solid #8DB2E3;
+	border:1px solid #CADAE2;
+	background:#fff;
+	margin-left :100px;
+	margin-right :100px;
+}
+.mainDiv1 p
+{
+	text-indent :2em;
+	color :Black ;
+	font-size :14px
+}
+.popMainDiv{
+	border-color:#f90;
+	background:#ffe;
+}
+.mainDiv1 h3{
+	margin:10px auto;
+	border-bottom:3px double #CFE1F8;
+	background:#EEF5FD;
+	font-size:14px;
+	color :Black 
+}
+
+/***** 主分区1 左栏上 */
+#main1{ float:left;width:620px;border-color:#f90;background:#ffe}
+#main1 h2{ background-position:0 -180px; }
+#main1 h3{
+	padding-left:1em;
+	background:url(../img/web_header1.png) 0 -240px no-repeat;
+}
+#main1 li,#main1 .hotline{
+	padding-left:24px;
+	background:url(../img/web_welcomeList.gif) 0 3px no-repeat;
+	font:13px/1.8em "宋体";
+}
+#main1 ul{ margin:12px auto;}
+#main1 li{ margin:6px auto}
+#main1 p{ text-indent:2em;}
+/****** 服务 */
+#service{}
+/******* 服务热线 */
+#main1 p.hotline{ margin:12px auto 18px 40px;text-indent:0;}
+
+/***** 主分区2 右栏 */
+#main2{
+	float:right;
+	width:306px;
+	text-align:center;
+}
+/****** 登录 */
+#login{}
+.baseTable{
+	width:100%;
+	border-collapse:separate;
+	border-spacing:1px;
+	border:3px double #4991DE;
+	border-color:#CFE1F8 #4991DE;
+	border-width:3px 0;
+	font:12px "宋体";
+	vertical-align:top;
+} 
+.baseTable thead tr th
+{
+	  
+	  font-weight:bold ;
+	  font-size :13px
+	}
+.baseTable th
+{
+		text-align :left ;
+	}
+colgroup{ background:#EEF5FD;}
+th,td{ border:0;height:30px;}
+th{ text-align:right;font-weight:normal;}
+td{ text-align:left;}
+.baseTable .inputText,.baseTable .inputPassword{ width:130px;height:16px;}
+input#subjoin{ width:40px;}
+.handle{ text-align:center;font-size:13px;}
+.accessionalCodeImg{
+	cursor:pointer;
+	_cursor:hand;
+}
+
+#remindText{
+	visibility:hidden;
+	position:absolute;
+	z-index:9;
+	margin:24px auto auto -63px;
+	+margin-left:-69px;
+	padding:2px 6px 2px 24px;
+	+padding-top:4px;
+	border:1px solid #ccc;
+	border-color:#ccc #999 #999 #ccc;
+	background:#fff url(/image/public/remind.gif) -200px 1px no-repeat;
+	color:#f60;
+}
+/****** 直通车 */
+#through{ display:block;}
+#through img{ display:block;margin:15px auto;}
+/****** 最新统计 */
+table.joined{ margin:auto;width:200px;border:1px solid #f90;}
+table.joined th,table.joined td{ height:20px;line-height:normal;}
+table.joined th{ text-align:right;color:#f00;}
+table.joined td{ font-family: Verdana, Arial, Helvetica, sans-serif;}
+#statistic{
+	margin:15px 10px 15px;
+	border:3px double #4991DE;
+	border-color:#CFE1F8 #4991DE;
+	border-width:3px 0;
+	background:#EEF5FD;
+}
+#statistic h3{ margin:5px auto;}
+#statistic q{ color:#f00;} #statistic q:before, #statistic q:after { content:'';}
+/****** 全球认证 */
+#globalData{ margin:21px auto 15px;border:1px solid #999;width:292px;height:44px; font:bold 14px/44px "宋体";}
+#globalData img{ float:left;margin:1px;border:1px solid #ccc;}
+/****** unspsc */
+#unspsc{ margin:15px auto;padding:1px;border:1px solid #999;width:290px;}
+#unspsc img{ display:block;padding:3px 0;border:1px solid #ccc;}
+/****** 下载 */
+#download{ text-align:center;}
+#download h3{
+	height:44px;
+	border-top:1px solid #CADAE2;
+	background:url(../img/web_header1.png) 0 -129px no-repeat;
+	font:bold 14px/44px "宋体";
+	text-align:center;
+}
+#download a{
+	margin:auto 10px;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+#download img{
+	display:block;
+	padding:1px;
+	border:1px solid #999;
+	width:110px;
+	height:150px;
+	/*filter:Gray;*/
+}
+#download a:hover img{
+	/*filter:none;*/
+}
+
+/***** 主分区3 左栏下 */
+#main3{ float:left;margin-top:10px;width:620px; height:590px; }
+#main3 p{ text-indent:2em;}
+ul.activity{ overflow:hidden;zoom:1;padding:0;}
+ul.activity li{ overflow:hidden;_zoom:1;margin:10px 0;}
+ul.activity h3{ margin-bottom:12px;border-bottom:1px solid #CFE1F8;}
+ul.activity .topImg{ float:left;margin-right:10px;_margi-right:7px;border:1px solid #999; padding:1px; width:110px;}
+ul.activity img{ width:110px;height:70px;}
+ul.activity p{ overflow:hidden; _zoom:1; margin:0;font-size:12px;}
+ul.activity a{ color:#444444;text-decoration: none }
+
+/** 页脚 */
+.footer{
+	padding:1px 1px 20px;
+	border-top:1px solid #CADAE2;
+	zoom:1;
+	text-align:center;
+	line-height:normal;
+	font-size :13px
+}
+.footer p{ margin:14px auto;}
+.intro{ padding-top:20px;height:25px;background:url(/img/web_header1.png) 0 -130px repeat-x;}
+.introList{
+	display:inline-block;
+	display:-moz-inline-box;
+	+display:inline;
+	+zoom:1;
+	overflow:hidden;
+	padding-left:0;
+}
+.intro li{
+	display:inline;
+	float:left;
+	margin-left:-1px;
+	padding:0 1.8em;
+	border-left:1px solid #000;
+}
+.copyright em{ font:14px Georgia, "Times New Roman", Times, serif}
+.phone{ display:none;}
+.icp{}
+.email{ display:none;}
+
+/* 园角按钮 */
+.btnLabel,.subLabel,.resLabel{
+	_overflow-y:hidden;
+	display:-moz-inline-box;
+	display:inline-block;
+	margin-right:10px;
+	padding-left:2px;
+	height:22px;
+	background:url(../img/web_cobutton.png);
+	+vertical-align:middle;
+}
+button,.button,.submit,.reset{
+	_overflow:visible;
+	_position:relative;
+	margin:0 -10px 0 0;
+	padding:2px 10px 2px 10px; /* even */
+	+padding:1px 0 0;
+	_padding:1px 10px 0 10px;
+	border:0;
+	/*width:73px;*/
+	height:22px; /* other browser even */
+	_height:21px; /* IE6 odd */
+	background:url(../img/web_cobutton.png) 100% 0;
+	text-align:center;
+	font:12px/1em "宋体";
+	color:#000;
+	cursor:pointer;
+}
+.button{ /* button of input tag IE6-7 */
+	+padding:2px 10px 0 10px;
+	+height:22px;
+}
+@media all and(min-width:0px){/* opera 7 styles */
+button{
+	padding-top:5px;
+}
+}
+.btnLabel:hover,label.hover{
+	background-position:0 -30px;
+}
+.btnLabel:hover button,.btnLabel:hover .button,label.hover button,label.hover .button{
+	background-position:100% -30px;
+}
+
+
+/* 输入框文本暗记提示 */
+.input-prompt-label{
+	display:inline-block;
+}
+.input-prompt-text{
+	position:absolute;
+	margin:3px auto auto 3px;
+	color:#ccc;
+}
+ /* 设置容器宽度，强制行内元素始终在一行内显示，溢出隐藏 */
+.ellipsis{
+	display:block;
+	overflow:hidden;
+	/* width: ; 必须赋值*/
+	white-space:nowrap;
+	word-break:break-all; /* IE */
+	-webkit-text-overflow:ellipsis; /* Safari/chrome */
+	-o-text-overflow:ellipsis; /* Opera */
+	text-overflow:ellipsis; /* IE */
+}
