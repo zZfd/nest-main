@@ -8,24 +8,24 @@
 import { Strategy } from 'passport-local'
 import { PassportStrategy } from '@nestjs/passport'
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common'
-import { UserService } from '../user.service'
+import { AuthService } from './auth.service'
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
-  constructor(private readonly userService: UserService) {
+  constructor(private readonly authService: AuthService) {
     super()
   }
 
   validate(username: string, password: string): any {
     // tslint:disable-next-line
-    // console.log(username, password)
-    // const user = this.authService.validateUser(username, password);
-    // console.log('stratage',user)
-    // if (!user) {
-    //   throw new HttpException(
-    //     { message: 'authorized failed', error: 'please try again later.' },
-    //     HttpStatus.BAD_REQUEST);
-    // }
-    // return user;
+    console.log(username, password)
+    const user = this.authService.validateUser(username, password);
+    console.log('stratage',user)
+    if (!user) {
+      throw new HttpException(
+        { message: 'authorized failed', error: 'please try again later.' },
+        HttpStatus.BAD_REQUEST);
+    }
+    return user;
   }
 }

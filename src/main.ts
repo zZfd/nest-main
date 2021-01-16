@@ -6,7 +6,7 @@
  * @Description:
  */
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '/src/modules/app/app.module';
+import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import * as helmet from 'helmet';
 import * as rateLimit from 'express-rate-limit';

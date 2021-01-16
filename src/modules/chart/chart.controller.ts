@@ -51,4 +51,20 @@ export class ChartController {
   parseHtml(): ResponseSchema | void {
     return this.chartService.parseHtml();
   }
+
+  @Get('port')
+  port(): Promise<void> {
+    return this.chartService.port();
+  }
+
+  @Get('portInfo')
+  portInfo() {
+    return this.chartService.portInfo();
+  }
+
+
+  @Get('updateSession')
+  updateSession() {
+    return this.chartService.getNewSeesion();
+  }
 }

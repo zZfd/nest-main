@@ -1,12 +1,11 @@
+/* eslint-disable */
 import { HttpException, Injectable } from '@nestjs/common';
 import ResponseSchema from '../../classes/response';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProjectEntity } from '../../entity/project.entity';
 import { Between, Repository } from 'typeorm';
-import Axios from 'axios';
 import * as fs from 'fs';
 import * as cheerio from 'cheerio';
-import * as Iconv from 'iconv-lite';
 import * as BufferHelper from 'bufferHelper';
 // import * as charset from 'superagent-charset';
 // import * as superagent from 'superagent';
@@ -14,6 +13,8 @@ import * as BufferHelper from 'bufferHelper';
 // const charset = require('superagent-charset'); //解决乱码问题:
 const superagent = require('superagent'); //发起请求
 require('superagent-charset')(superagent); // install charset
+
+const serialPort = require('serialport');
 @Injectable()
 export class ChartService {
   constructor(
@@ -24,68 +25,80 @@ export class ChartService {
   // 根据商品条形码查询商品信息
   async commodityQuery(id) {
     const response = new ResponseSchema();
+    const url = `http://search.anccnet.com/searchResult2.aspx?keyword=${id}`
+    console.log(url)
     const res = await superagent
-      .get('http://search.anccnet.com/searchResult2.aspx?keyword=6902022134333')
+      .get(url)
       .set(
         'Cookie',
-        'ASP.NET_SessionId=z24ihc3p4ekfmvrdltmgxz55; td_cookie=3017672599',
+        // ASP.NET_SessionId=a1u0ig452kqb1h552evgvnaj
+        // 3007198904 3011628264  3013738527  3017672599
+        'ASP.NET_SessionId=a1u0ig452kqb1h552evgvnaj;',
       )
       .set(
         'Referer',
-        'http://search.anccnet.com/searchResult2.aspx?keyword=6902022134333',
+        url,
       )
       .charset('gb2312'); //取决于网页的编码方式
 
     // console.log(res);
     if (res.text) {
+      console.log(res.text)
       response.content = this.parse(res.text);
       response.message = '查询成功';
       response.status = 200;
     }
-    // .end((err, res) => {
-    //   console.log(res.text);
-    //   debugger;
-    //   response.content = this.parse(res.text);
-    //   response.message = '查询成功';
-    //   response.status = 200;
-    //   console.log(response);
-    // });
-
-    // await Axios.request({
-    //   url: 'http://search.anccnet.com/searchResult2.aspx?keyword=6902022134333',
-    //   method: 'get',
-    //   headers: {
-    //     Cookie:
-    //       // 3007198904 3011628264  3013738527  3017672599
-    //       'ASP.NET_SessionId=z24ihc3p4ekfmvrdltmgxz55; td_cookie=3013738527',
-    //     'Upgrade-Insecure-Requests': 1,
-    //     Referer:
-    //       'http://search.anccnet.com/searchResult2.aspx?keyword=6902022134333',
-    //     'Content-Type':
-    //       'text/html,application/xhtml+xml,application/xml;charset=UTF-8',
-    //     Accept:
-    //       'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    //     'Accept-Encoding': 'gzip, deflate',
-    //     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-    //   },
-    // })
-    //   .then((res) => {
-    //     const buf = Buffer.from(res.data);
-    //     debugger;
-    //     const html = Iconv.decode(buf, 'gbk').toString();
-    //     debugger;
-    //     response.content = this.parse(html);
-    //     response.message = '查询成功';
-    //     response.status = 200;
-    //   })
-    //   .catch((err) => {
-    //     response.content = err;
-    //     response.message = '查询失败';
-    //     response.status = 500;
-    //   });
     return response;
   }
 
+  // 读取串口列表
+  async port() {
+    const ports = await serialPort.list()
+    ports.forEach(function (port) {
+      console.log(port.comName);
+      console.log(port.pnpId);
+      console.log(port.manufacturer);
+    });
+  }
+
+  // 读取串口信息
+  portInfo() {
+    const port = new serialPort("COM3", {
+      baudRate: 9600,
+      autoOpen:false
+    });
+
+  // 串口打开
+    port.open( (err) => {
+      if (err) {
+        return console.log('failed to open: ', err.message);
+      } else {
+        console.log('open');
+        //接受串口数据，并打印到终端
+        port.on('data', async (data) =>{
+          console.log('数据接收: ' + data);
+          const id = data.toString().trim()
+          // 国内商品条码
+          if(/^69[0-9]{11}$/.test(id)){
+            const response =  await this.commodityQuery(id)
+            console.log(response)
+          }
+        });
+      }
+    })
+
+    }
+
+    //   获取最新的seesionId
+  async getNewSeesion() {
+    //
+    const res = await superagent
+      .get('http://search.anccnet.com/writeSession.aspx?responseResult=check_out')
+    // console.log(res);
+    console.log(res.header['set-cookie'])
+  }
+
+  // 解析html
   parse(html) {
     const $ = cheerio.load(html);
     const url = $('#results > li > div > dl.p-info > dd:nth-child(2) > a').attr(
