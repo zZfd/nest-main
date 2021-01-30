@@ -19,6 +19,7 @@ import { resolve } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import statusMonitorConfig from './config/statusMonitor';
 import { ChartModule } from './modules/chart/chart.module';
+import { CommunicationModule } from './modules/communication/communication.module';
 
 const jwtConstants = {
   secret: 'secretKey',
@@ -34,6 +35,7 @@ const jwtConstants = {
     // TODO @nestjs/terminus almost the same
     StatusMonitorModule.setUp(statusMonitorConfig),
     ChartModule,
+    CommunicationModule,
     // HelloModule,
     // UserModule,
     // AuthModule

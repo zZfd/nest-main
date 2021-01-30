@@ -5,7 +5,10 @@
  * @LastEditTime: 2020-12-03 13:10:16
  * @Description:
  */
+// import {} from '@nestjs/websockets'
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
+
 import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import * as helmet from 'helmet';
@@ -13,6 +16,7 @@ import * as rateLimit from 'express-rate-limit';
 import * as csurf from 'csurf';
 import * as session from 'express-session';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { ResponseInterceptor } from './common/interceptors/response.interceptor';
 
 // import { registerSchema } from 'class-validator'
 // import * as UserValidationSchema  from "./modules/user/classes/request/validation";
@@ -20,10 +24,13 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 // registerSchema(UserValidationSchema.signUp); // if schema is in .json file, then you can simply do registerSchema(require("path-to-schema.json"));
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  // const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   // 全局过滤器
   app.useGlobalFilters(new HttpExceptionFilter());
+  // 配置全局拦截器
+  app.useGlobalInterceptors(new ResponseInterceptor());
 
   // helmet 防止网站攻击 xss等
   app.use(helmet());
