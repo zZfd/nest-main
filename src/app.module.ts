@@ -35,7 +35,7 @@ const jwtConstants = {
     // TODO @nestjs/terminus almost the same
     StatusMonitorModule.setUp(statusMonitorConfig),
     ChartModule,
-    CommunicationModule,
+    // CommunicationModule,
     // HelloModule,
     // UserModule,
     // AuthModule

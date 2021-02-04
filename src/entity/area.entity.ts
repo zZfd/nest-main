@@ -1,16 +1,58 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { StaffEntity } from './staff.entity';
+import { TimeEntity } from './commonEntity';
+import { StockInProduct } from './stockInProduct';
+// 区域表
 @Entity('area')
 export class AreaEntity {
+  // 主键，递增
   @PrimaryGeneratedColumn({ type: 'int' })
   id: number;
 
-  @Column('nvarchar', { length: 10 })
-  code: string;
+  // 楼层
+  @Column('smallint')
+  floor: number;
 
-  @Column('nvarchar', { length: 10 })
-  name: string;
+  // 网格
+  @Column('varchar', { length: 20 })
+  grid: string;
 
-  @Column('int')
-  city_id: number;
+  // 货架
+  @Column('varchar', { length: 20 })
+  shelf: string;
+
+  // 货架层
+  @Column('smallint')
+  shelfFloor: number;
+
+  // 负责人
+  @OneToOne((type) => StaffEntity)
+  @JoinColumn()
+  admin: StaffEntity;
+
+  // 创建时间，修改时间
+  @Column((type) => TimeEntity)
+  time: TimeEntity;
+
+  // 备注，可为空
+  @Column('nvarchar', { length: 200, nullable: true })
+  description: string;
+
+  // 是否有效
+  @Column('bit', { default: true })
+  isValid: boolean;
+
+  // 一对多，产品
+  @OneToMany(
+    (type) => StockInProduct,
+    (stockInProduct) => stockInProduct.stockInSheet,
+  )
+  products: StockInProduct[];
 }
