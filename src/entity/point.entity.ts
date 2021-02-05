@@ -8,10 +8,10 @@ import {
 } from 'typeorm';
 import { StaffEntity } from './staff.entity';
 import { TimeEntity } from './commonEntity';
-import { StockInProduct } from './stockInProduct';
+import { StockInProductEntity } from './stockInProduct.entity';
 // 区域表
-@Entity('area')
-export class AreaEntity {
+@Entity('point')
+export class PointEntity {
   // 主键，递增
   @PrimaryGeneratedColumn({ type: 'int' })
   id: number;
@@ -51,8 +51,8 @@ export class AreaEntity {
 
   // 一对多，产品
   @OneToMany(
-    (type) => StockInProduct,
-    (stockInProduct) => stockInProduct.stockInSheet,
+    (type) => StockInProductEntity,
+    (stockInProduct) => stockInProduct.point,
   )
-  products: StockInProduct[];
+  products: StockInProductEntity[];
 }

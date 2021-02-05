@@ -6,10 +6,17 @@
  * @Description: 员工表
  */
 
-import { Entity, Column, PrimaryColumn, ManyToMany, OneToOne } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryColumn,
+  ManyToMany,
+  OneToOne,
+  JoinColumn,
+  JoinTable,
+} from 'typeorm';
 import { TimeEntity } from './commonEntity';
 import { RoleEntity } from './role.entity';
-import { JoinColumn, JoinTable } from 'typeorm/browser';
 import { AddressEntity } from './address.entity';
 
 @Entity({ name: 'staff' })

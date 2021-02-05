@@ -1,8 +1,15 @@
-import { Column, Entity, JoinColumn, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn,
+} from 'typeorm';
 import { SupplierEntity } from './supplier.entity';
 import { StaffEntity } from './staff.entity';
 import { TimeEntity } from './commonEntity';
-import { StockInProduct } from './stockInProduct';
+import { StockInProductEntity } from './stockInProduct.entity';
 // 入库单
 @Entity('stockInSheet')
 export class StockInSheetEntity {
@@ -11,12 +18,12 @@ export class StockInSheetEntity {
   id: string;
 
   // 供应商， 可为空
-  @Column((type) => SupplierEntity)
+  @OneToOne((type) => SupplierEntity)
   @JoinColumn()
   supplier: SupplierEntity;
 
   // 采购员
-  @Column((type) => StaffEntity)
+  @OneToOne((type) => StaffEntity)
   @JoinColumn()
   staff: StaffEntity;
 
@@ -37,8 +44,8 @@ export class StockInSheetEntity {
   status: number;
 
   @OneToMany(
-    (type) => StockInProduct,
+    (type) => StockInProductEntity,
     (stockInProduct) => stockInProduct.stockInSheet,
   )
-  products: StockInProduct[];
+  products: StockInProductEntity[];
 }

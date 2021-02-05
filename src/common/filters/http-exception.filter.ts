@@ -21,6 +21,7 @@ export class HttpExceptionFilter implements ExceptionFilter<HttpException> {
     const request = ctx.getRequest();
     const status = exception.getStatus();
     const exceptionRes: any = exception.getResponse();
+    console.log(exceptionRes);
     const { error, message } = exceptionRes;
     // if (errors.length > 0) {
     //   const errObj = {};
@@ -36,6 +37,7 @@ export class HttpExceptionFilter implements ExceptionFilter<HttpException> {
       status,
       timeStamp: new Date().toISOString(),
       path: request.url,
+      method: request.method,
       error,
       message,
     });

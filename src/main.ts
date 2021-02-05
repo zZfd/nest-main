@@ -17,7 +17,8 @@ import * as csurf from 'csurf';
 import * as session from 'express-session';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ResponseInterceptor } from './common/interceptors/response.interceptor';
-
+// import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe } from './common/pipe/validation.pipe';
 // import { registerSchema } from 'class-validator'
 // import * as UserValidationSchema  from "./modules/user/classes/request/validation";
 
@@ -54,6 +55,12 @@ async function bootstrap() {
       saveUninitialized: false,
     }),
   );
+  // 全局管道验证
+  app.useGlobalPipes(new ValidationPipe());
+  // app.useGlobalPipes(new ValidationPipe());
+
+  // 给请求添加prefix
+  // app.setGlobalPrefix('api/v1');
   // swagger文档配置
   const swaggerOptions = new DocumentBuilder()
     .setTitle('nextjs learn api document')

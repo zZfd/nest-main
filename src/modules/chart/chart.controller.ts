@@ -1,7 +1,6 @@
 import { Controller, Get, HttpException, Param, Post } from '@nestjs/common';
 import { ChartService } from './chart.service';
 import ResponseSchema from '../../classes/response';
-import { promises } from 'dns';
 @Controller('/chart')
 export class ChartController {
   constructor(private readonly chartService: ChartService) {}
@@ -9,10 +8,10 @@ export class ChartController {
   /**
    * 获取正在申请中的工程数量
    * */
-  @Get('applying')
-  applying(): Promise<ResponseSchema> {
-    return this.chartService.applying();
-  }
+  // @Get('applying')
+  // applying(): Promise<ResponseSchema> {
+  //   return this.chartService.applying();
+  // }
 
   /**
    * 获取日/周/月/年 时间段新增的申请数量
@@ -61,7 +60,6 @@ export class ChartController {
   portInfo() {
     return this.chartService.portInfo();
   }
-
 
   @Get('updateSession')
   updateSession() {

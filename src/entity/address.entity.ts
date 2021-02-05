@@ -1,4 +1,23 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { AddressCommonEntity } from './commonEntity';
+
+@Entity('country')
+export class CountryEntity extends AddressCommonEntity {}
+
+@Entity('province')
+export class ProvinceEntity extends AddressCommonEntity {}
+
+@Entity('city')
+export class CityEntity extends AddressCommonEntity {}
+
+@Entity('district')
+export class DistrictEntity extends AddressCommonEntity {}
 
 // 地区表，国家--省--市-区县 多主键
 @Entity('address')
@@ -8,18 +27,22 @@ export class AddressEntity {
   id: number;
 
   // 国家
-  @Column('int')
-  country: number;
+  @OneToOne((type) => CountryEntity)
+  @JoinColumn()
+  country: CountryEntity;
 
   // 省份
-  @Column('int')
-  province: number;
+  @OneToOne((type) => ProvinceEntity)
+  @JoinColumn()
+  province: ProvinceEntity;
 
   // 城市
-  @Column('int')
-  city: number;
+  @OneToOne((type) => CityEntity)
+  @JoinColumn()
+  city: CityEntity;
 
   // 区县
-  @Column('int')
-  area: number;
+  @OneToOne((type) => DistrictEntity)
+  @JoinColumn()
+  area: DistrictEntity;
 }

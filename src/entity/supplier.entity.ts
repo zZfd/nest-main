@@ -1,6 +1,6 @@
-import { Column, Entity, OneToOne, PrimaryColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm';
 import { AddressEntity } from './address.entity';
-import { JoinColumn } from 'typeorm/browser';
+// import { JoinColumn } from 'typeorm/browser';
 import { TimeEntity } from './commonEntity';
 
 @Entity('supplier')

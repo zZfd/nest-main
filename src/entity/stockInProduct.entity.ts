@@ -9,9 +9,9 @@ import {
 import { StockInSheetEntity } from './stockInSheet.entity';
 import { ProductEntity } from './product.entity';
 import { TimeEntity } from './commonEntity';
-import { AreaEntity } from './area.entity';
+import { PointEntity } from './point.entity';
 @Entity('stockInProduct')
-export class StockInProduct {
+export class StockInProductEntity {
   // 主键递增
   @PrimaryGeneratedColumn({ type: 'int' })
   id: number;
@@ -61,6 +61,6 @@ export class StockInProduct {
   isPut: boolean;
 
   // 区域
-  @ManyToOne((type) => AreaEntity, (area) => area.products)
-  area: AreaEntity;
+  @ManyToOne((type) => PointEntity, (point) => point.products)
+  point: PointEntity;
 }

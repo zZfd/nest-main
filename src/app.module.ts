@@ -13,7 +13,7 @@ import { AppService } from './app.service';
 // import { HelloModule } from './modules/hello/hello.module'
 // import { UserModule } from './modules/user/user.module';
 // import { AuthModule } from './modules/auth/auth.module';
-
+import { SupplierModule } from './modules/supplier/supplier.module';
 // import { LoggerMiddleware } from './common/middleware/logger.middleware'
 import { resolve } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -35,6 +35,7 @@ const jwtConstants = {
     // TODO @nestjs/terminus almost the same
     StatusMonitorModule.setUp(statusMonitorConfig),
     ChartModule,
+    SupplierModule,
     // CommunicationModule,
     // HelloModule,
     // UserModule,

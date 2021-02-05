@@ -12,7 +12,7 @@ export default {
   port: 1433,
   username: 'sa',
   password: 'zfd980323.',
-  database: 'ladder',
+  database: 'huadao',
   entities: [join(__dirname, '../', 'entity/**.entity{.ts,.js}')],
   migrationsTableName: 'custom_migration_table',
   migrations: [join(__dirname, '../', 'migration/**.migration{.ts,.js}')],

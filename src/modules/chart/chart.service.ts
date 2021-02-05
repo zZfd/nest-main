@@ -2,7 +2,7 @@
 import { HttpException, Injectable } from '@nestjs/common';
 import ResponseSchema from '../../classes/response';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ProjectEntity } from '../../entity/project.entity';
+// import { ProjectEntity } from '../../entity/project.entity';
 import { Between, Repository } from 'typeorm';
 import * as fs from 'fs';
 import * as cheerio from 'cheerio';
@@ -17,10 +17,10 @@ require('superagent-charset')(superagent); // install charset
 const serialPort = require('serialport');
 @Injectable()
 export class ChartService {
-  constructor(
-    @InjectRepository(ProjectEntity)
-    private readonly projectRepository: Repository<ProjectEntity>,
-  ) {}
+  // constructor(
+  //   @InjectRepository(ProjectEntity)
+  //   private readonly projectRepository: Repository<ProjectEntity>,
+  // ) {}
 
   // 根据商品条形码查询商品信息
   async commodityQuery(id) {
@@ -173,27 +173,27 @@ export class ChartService {
     });
   }
 
-  async applying() {
-    const response = new ResponseSchema();
-    const count = await this.projectRepository
-      .count({
-        status: Between(0, 11),
-      })
-      .catch((err) => {
-        console.log(err);
-        throw new HttpException(
-          {
-            message: '查询失败',
-            error: '服务器错误',
-          },
-          500,
-        );
-      });
-    response.content = count;
-    response.message = '查询成功';
-    response.status = 200;
-    return response;
-  }
+  // async applying() {
+  //   const response = new ResponseSchema();
+  //   const count = await this.projectRepository
+  //     .count({
+  //       status: Between(0, 11),
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       throw new HttpException(
+  //         {
+  //           message: '查询失败',
+  //           error: '服务器错误',
+  //         },
+  //         500,
+  //       );
+  //     });
+  //   response.content = count;
+  //   response.message = '查询成功';
+  //   response.status = 200;
+  //   return response;
+  // }
 
   dayApply() {
     const response = new ResponseSchema();
